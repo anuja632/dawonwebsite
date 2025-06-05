@@ -757,7 +757,10 @@ h6 {
   .row .justify-content-center {
     justify-content: start !important;
   }
-
+     .nav-link.d-flex {
+    flex-direction: row !important;
+    gap:10px;
+  }
 
   .card-title {
     font-size: 18px;
@@ -786,4 +789,73 @@ h6 {
   .card {
     padding: 15px 10px 0px 10px;
   }
+}
+
+    /* ========== MEDIA QUERIES FOR RESPONSIVENESS ========== */
+
+/* Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  .carousel-caption {
+    padding: 1.5rem;
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    left:0%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-caption p {
+    font-size: 18px;
+    width: auto;
+    text-align: center;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .owl-nav {
+    padding: 0 10px;
+  }
+
+  .owl-prev, .owl-next {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .speed,.ropes{
+    font-size: 5rem;
+  }
+  
+  .row .justify-content-center{
+    justify-content: start !important;
+  }
+}
+
+/* Phones (max-width: 576px) */
+@media (max-width: 576px) {
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 16px;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .owl-prev, .owl-next {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+
 }
