@@ -691,3 +691,99 @@ h6{
   .your-motion,.master {font-size: 2rem;
 }
  }
+
+
+ @media (max-width: 768px) {
+  .card-title {
+    font-size: 20px;
+    text-align: center;
+  }
+  .fs-5 {
+    font-size: 1.7rem !important;
+}
+
+
+
+  .card-text {
+    font-size: 16px;
+  }
+
+
+  .image-slider-wrapper {
+    height: 200px;
+  }
+
+  .slider-progress span {
+    width: 30px;
+  }
+#ad{
+  text-align: center;
+}
+    .card-button {
+        background-color: #C80000;
+        border: none;
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 8px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+        .speed, .ropes {
+        font-size: 4rem;
+    }
+     .nav-link.d-flex {
+    flex-direction: row !important;
+    gap:10px;
+  }
+      #la {
+        font-weight: 800;
+        font-size: 2rem;
+    }
+.footer{
+  font-size: 14px;
+}
+
+h6 {
+    font-size: 19px !important;
+}
+.footer i {
+  font-size: 1.3rem; /* smaller size, adjust as needed */
+}
+
+
+}
+
+@media (max-width: 550px) {
+  .row .justify-content-center {
+    justify-content: start !important;
+  }
+
+
+  .card-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .card-text {
+    font-size: 15px;
+  }
+
+  .card-button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .image-slider-wrapper {
+    height: 250px;
+  }
+
+  .slider-progress span {
+    width: 25px;
+  }
+
+  .card {
+    padding: 15px 10px 0px 10px;
+  }
+}
