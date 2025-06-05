@@ -693,13 +693,13 @@ h6{
  }
 
 
- @media (max-width: 768px) {
+ @media (min-width: 768px)  and (max-width:820px){
   .card-title {
     font-size: 20px;
     text-align: center;
   }
   .fs-5 {
-    font-size: 1.7rem !important;
+    font-size: 1.9rem !important;
 }
 
 
@@ -779,7 +779,7 @@ h6 {
   }
 
   .image-slider-wrapper {
-    height: 250px;
+    height: 500px;
   }
 
   .slider-progress span {
@@ -789,73 +789,125 @@ h6 {
   .card {
     padding: 15px 10px 0px 10px;
   }
+  .card-title{
+    text-align: start;
+    font-size: 20px;
+  }
+  #ad{
+    text-align: start;
+  }
+  #lo {
+    margin-left: -100px;
+}
 }
 
     /* ========== MEDIA QUERIES FOR RESPONSIVENESS ========== */
 
-/* Tablets (max-width: 991px) */
-@media (max-width: 991px) {
+/* Smaller tablets and large phones */
+@media (max-width: 991.98px) {
+  .owl-carousel .item {
+    height: 60vh;
+  }
+  
   .carousel-caption {
-    padding: 1.5rem;
     max-width: 90%;
-    text-align: center;
-    margin: 0 auto;
-    left:0%;
+    padding: 1.5rem;
+    left: 3%;
   }
-
+  
   .carousel-caption h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
-
+  
   .carousel-caption p {
-    font-size: 18px;
-    width: auto;
-    text-align: center;
+    font-size: 1.1rem;
+    width: 100%;
   }
-
+  
   .carousel-caption .btn {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     padding: 10px 20px;
   }
-
-  .owl-nav {
-    padding: 0 10px;
-  }
-
+  
   .owl-prev, .owl-next {
     width: 40px;
     height: 40px;
     font-size: 16px;
   }
-  .speed,.ropes{
-    font-size: 5rem;
-  }
-  
-  .row .justify-content-center{
-    justify-content: start !important;
-  }
 }
 
-/* Phones (max-width: 576px) */
-@media (max-width: 576px) {
+/* Mobile phones */
+@media (max-width: 575.98px) {
+  .owl-carousel .item {
+    height: 50vh;
+  }
+  
+  .carousel-caption {
+    max-width: 75%;
+    padding: 1rem;
+    left: 12%;
+  }
+  
   .carousel-caption h1 {
     font-size: 1.5rem;
   }
-
+  
   .carousel-caption p {
-    font-size: 16px;
+    font-size: 1rem;
+    width: 100%;
   }
-
+  
   .carousel-caption .btn {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     padding: 8px 16px;
   }
-
+  
   .owl-prev, .owl-next {
     width: 35px;
     height: 35px;
     font-size: 14px;
   }
+      .fs-5 {
+        font-size: 1.3rem
+ !important;
+    }
+}
 
+/* Very small devices */
+@media (max-width: 375px) {
+  .carousel-caption h1 {
+    font-size: 1.2rem;
+  }
 
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+.image-slider-wrapper{
+  height:340px;
+}
+    #lo {
+        margin-left: -180px;
+    }
+    .play-icon {
+    z-index: 3;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+}
+@media (min-width:380px) and (max-width: 500px) {
+.image-slider-wrapper{
+  height:370px;
+}
+  #lo {
+    margin-left: -160px;
+}
 }
