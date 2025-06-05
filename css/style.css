@@ -455,7 +455,7 @@ color:#000
   background-color: #cc0000;
   border-radius: 20px;
   overflow: hidden;
-  margin: 40px 0px 0px 0px;
+  margin: 4px 0px 0px 0px;
 }
 
 /* Image Handling */
@@ -474,14 +474,14 @@ color:#000
 
 /* Optional: Ensure full height alignment */
 .jump-banner {
-  background-color: #f7f0ea; /* Light cream outer background */
-}
+background-color: #f4e9e2;}
 .video-banner {
   background: url('./../image/girl.png') no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  height: 70vh;
   position: relative;
 }
+
 
 .overlay {
   background: rgba(0, 0, 0, 0.3); /* subtle dark overlay for better text readability */
@@ -554,7 +554,7 @@ h6{
  }
 
 /* 1024px and below */
-@media(min-width: 993px) and (max-width: 1060px){
+@media(min-width: 993px) and (max-width: 1200px){
   .navbar-nav .nav-item {
     margin: 0 10px;
 
@@ -569,6 +569,35 @@ h6{
 
   .custom-input-group input::placeholder {
     font-size: 14px;
+  }
+    .owl-carousel .item {
+    height: 60vh;
+  }
+    
+  .carousel-caption {
+    max-width: 70%;
+    padding: 1.5rem;
+    left: 6%;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.1rem;
+    width: 70%;
+  }
+  
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  
+  .owl-prev, .owl-next {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
   .your-motion,.master {font-size: 2rem;
 }
@@ -629,7 +658,16 @@ h6{
 .speed, .ropes{
   font-size: 5rem;;
 }
-
+.play-icon img {
+    width: 50%;
+    height: auto;
+}
+.video-banner {
+    background: url(./../image/girl.png) no-repeat center center;
+    background-size: cover;
+    height: 45vh;
+    position: relative;
+}
 
 }
  @media  (max-width:912px) {
@@ -667,8 +705,11 @@ h6{
 .video-banner {
     background: url(./../image/girl.png) no-repeat center center;
     background-size: cover;
-    height: 65vh;
+    height: 35vh;
     position: relative;
+}
+#io{
+  padding-top: 0px !important;
 }
 
 #la {
@@ -690,6 +731,19 @@ h6{
 }
   .your-motion,.master {font-size: 2rem;
 }
+    .carousel-caption {
+        max-width: 70% !important;
+        padding: 1.5rem;
+        left: 6% !important;
+    }
+.carousel-caption p{
+  width:70% !important;
+}
+  .owl-carousel .item {
+    height: 50vh !important;
+  }
+  
+
  }
 
 
@@ -698,8 +752,8 @@ h6{
     font-size: 20px;
     text-align: center;
   }
-  .fs-5 {
-    font-size: 1.9rem !important;
+#op{
+    font-size: 0.8rem !important;
 }
 
 
@@ -722,8 +776,8 @@ h6{
     .card-button {
         background-color: #C80000;
         border: none;
-        padding: 10px;
-        font-size: 12px;
+        padding: 5px;
+        font-size: 11px;
         border-radius: 8px;
         color: #FFFFFF;
         text-align: center;
@@ -751,6 +805,40 @@ h6 {
 }
 
 
+    .carousel-caption {
+        max-width: 70% !important;
+        padding: 1.5rem;
+        left: 6% !important;
+    }
+.carousel-caption p{
+  width:70% !important;
+}
+.your-motion, .master{
+  font-size: 1.5rem;
+}
+.slider-progress {
+    position: absolute;
+    top: 9px;
+    left: 18px;
+    display: flex
+;
+    gap: 5px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 82%;
+    text-align: center;
+}
+.play-icon img {
+    width: 50%;
+    height: auto;
+}
+.video-banner {
+    background: url(./../image/girl.png) no-repeat center center;
+    background-size: cover;
+    height: 35vh;
+    position: relative;
+}
 }
 
 @media (max-width: 550px) {
@@ -761,7 +849,9 @@ h6 {
     flex-direction: row !important;
     gap:10px;
   }
-
+#al{
+  row-gap: 20px;
+}
   .card-title {
     font-size: 18px;
     text-align: center;
