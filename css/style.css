@@ -808,7 +808,7 @@ h6 {
     .carousel-caption {
         max-width: 70% !important;
         padding: 1.5rem;
-        left: 6% !important;
+        left: 8% !important;
     }
 .carousel-caption p{
   width:70% !important;
@@ -935,7 +935,7 @@ h6 {
   .carousel-caption {
     max-width: 75%;
     padding: 1rem;
-    left: 12%;
+    left: 12% !important;
   }
   
   .carousel-caption h1 {
@@ -961,6 +961,24 @@ h6 {
         font-size: 1.3rem
  !important;
     }
+    .play-icon img {
+    width: 50%;
+    height: auto;
+}
+.video-banner {
+    background: url(./../image/girl.png) no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+}
+#aq{
+  width:170px;
+}
+    #la {
+        font-weight: 800;
+        font-size: 2.9rem
+;
+    }
 }
 
 /* Very small devices */
@@ -968,9 +986,14 @@ h6 {
   .carousel-caption h1 {
     font-size: 1.2rem;
   }
+.carousel-caption{
+      left:15% !important;
 
+}
+  
   .carousel-caption p {
     font-size: 0.9rem;
+    width:90%;
   }
 
   .carousel-caption .btn {
