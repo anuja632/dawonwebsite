@@ -1,0 +1,693 @@
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+/* Apply global box-sizing fix */
+* {
+  box-sizing: border-box;
+}
+/* Logo wrapper with white background */
+.logo-wrapper {
+  background-color: white;
+  padding: 4px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Logo image height */
+.logo-img {
+  height: 45px;
+}
+/* navbar */
+.navbar {
+      background-color: #000;
+      font-size: 20px;
+           font-family: "Roboto Condensed",sans-serif;
+}
+.navbar-brand img {
+      height: 45px;
+}
+.search-bar {
+      max-width: 400px;
+      width: 100%;
+      color:#8996A2;
+}
+.custom-input-group {
+  background-color:white;
+  padding: 6px 10px;
+  border-radius: 999px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.custom-input-group input::placeholder {
+  color: #8996A2;
+  font-weight: 600;
+  letter-spacing: 1px;
+ 
+}
+
+.custom-input-group .input-group-text {
+  background: transparent;
+  border: none;
+  padding-left: 0;
+   margin-left: 10px;
+}
+
+.custom-input-group i {
+  font-size: 18px;
+}
+/* carousel */
+.item1 {
+  background-image: url('./../image/banner1.png'); /* Update for all */
+  background-size: cover;
+}
+.item2{
+  background-image: url('./../image/banner2.png'); /* Update for all */
+  background-size: cover;
+}
+.item3{
+  background-image: url('./../image/banner3.png'); /* Update for all */
+   background-size: cover;
+}
+.owl-carousel .item {
+  position: relative;
+  height: 86vh;
+  width: 100vw !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-color: #000 !important; /* or match the image tone */ 
+}
+.owl-carousel {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+.owl-carousel .item::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Adjust opacity/color here */
+  z-index: 1;
+}
+
+.carousel-caption {
+  position: relative;
+  z-index: 2; /* To make sure caption is above the overlay */
+}
+
+.carousel-caption {
+  max-width: 800px;
+  padding: 2rem;
+  left:5%;
+  border-radius: 10px;
+  text-align: start !important;
+}
+
+.carousel-caption h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      font-family:"Fugaz One",sans-serif;
+    }
+
+    .carousel-caption p {
+      font-size:25px;
+      margin-top: 1rem;
+      font-family: "Roboto Condensed",sans-serif;
+      width:400px;
+      text-align: justify;
+    }
+
+    .carousel-caption .btn {
+      background-color:#C80000;
+      border: none;
+      font-weight: 700;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 8px;
+      margin-top: 1.5rem;
+      color:#FFFFFF;
+    }
+
+
+
+    /* Navigation Styling */
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 20px;
+        transform: translateY(-50%);
+
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .owl-prev, .owl-next {
+      background-color: white !important;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: gray;
+      cursor: pointer;
+      pointer-events: all;
+      transition: all 0.3s ease;
+      z-index: 10000;
+    }
+
+    .owl-prev:hover, .owl-next:hover {
+      background-color: #eee;
+      color: #000;
+    }
+
+
+.vertical-line {
+  border-left: 2px solid #C80000;
+  height: 40px;
+}
+
+.herodown-img{
+  width:50px;
+  height:50px;
+}
+.herodown{
+  font-family: "Roboto Condensed",sans-serif;
+  font-size: 20px;
+  color:#C80000;
+}
+.hero-image {
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+/* Hero banner speed in 1440px */
+
+/* Hero for ≥1440px */
+.hero {
+  background: url('./../image/speed.png') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2%;
+  color: #000;
+  display: flex;
+}
+.speed-section {
+  background-color: #fff;
+}
+
+    .hero-content {
+      background: none;
+      /* padding: 40px 30px; */
+      max-width: 600px;
+      backdrop-filter: brightness(105%);
+    }
+
+.speed {
+  background: linear-gradient(to bottom, #c9001f, #b8001e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+        font-weight: 1000;
+      font-size: 6rem;
+}
+
+.ropes {
+  background: linear-gradient(to bottom, #2e0000, #b8001e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+        font-weight: 1000;
+      font-size: 6rem;
+      margin-left:30px;
+}
+
+.master {
+  background: linear-gradient(to bottom, #1C5DB5, #164ca0); /* Gradient blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+        font-weight: bold;
+      font-size: 2.5rem;
+
+}
+
+.your-motion {
+  background: linear-gradient(to right,#1C5DB5, #000000); /* Very dark gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+        font-weight: bold;
+      font-size: 2.5rem;
+
+}
+
+.card{
+  padding: 20px 15px 0px 15px;
+}
+.card-title{
+  font-family:"Roboto Condensed";
+  font-weight: bold;
+  font-size: 23px;
+}
+.card-button{
+      background-color:#C80000;
+      border: none;
+
+      padding:10px;
+      font-size: 1rem;
+      border-radius: 8px;
+
+      color:#FFFFFF;
+    }
+    a{
+      text-decoration: none !important;
+    }
+    .card-text{
+      text-align: justify;
+      color:#000000;
+    font-size: 18px;
+    }
+      .image-slider-wrapper {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .image-slider-wrapper {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .image-slider-wrapper img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+  transition: opacity 0.4s ease, border 0.4s ease;
+  border: 3px solid transparent; /* No border by default */
+  border-radius: 10px;   }
+
+
+.image-slider-wrapper img.active {
+  opacity: 1;
+}
+  .slider-progress {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    display: flex
+;
+    gap: 5px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 90%;
+    text-align: center;
+  }
+
+  .image-slider-wrapper:hover .slider-progress {
+    opacity: 1;
+  }
+
+  .slider-progress span {
+    flex: 1;
+    background: rgba(24, 24, 24, 0.3);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    height: 4px;
+    width: 40px;
+  }
+
+  .slider-progress .fill {
+    height: 100%;
+    width: 0%;
+    background: red;
+  }
+        .category-section {
+      padding: 60px 0;
+      /* text-align: center; */
+    }
+
+    .category-section h2 {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-family: "Fugaz One",cursive;
+color:#000
+    }
+
+
+
+    .category-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .category-label {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+      font-family: "Roboto Condensed";
+      text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+       .banner {
+      background-color: white;
+      padding:60px -1px 0px 30px;
+      /* background-image: url("./../image/astar.png"); */
+
+    }
+
+    .banner h1 {
+      font-weight: 800;
+      font-size: 4rem;
+      margin-bottom: 10px;
+      font-style: italic;
+      line-height: 1.2;
+    }
+
+    .text-red {
+      color: #9b0d1e;
+    }
+
+    .text-dark-red {
+      color: #330000;
+    }
+
+    .text-gradient-red {
+      background: linear-gradient(to right, #9b0d1e, #330000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-blue-black {
+      background: linear-gradient(to right, #004aad, #000000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .banner img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .heros {
+      background: url('./../image/beast.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 1%;
+      color: #000;
+    
+    }
+
+    .heros-content {
+      background: none;
+      /* padding: 40px 30px; */
+      max-width: 600px;
+      backdrop-filter: brightness(105%);
+    }/* Red Box Background */
+.red-box {
+  background-color: #cc0000;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 40px 0px 0px 0px;
+}
+
+/* Image Handling */
+.jump-image {
+  max-height: 550px !important;
+  object-fit: contain;
+  width:auto;
+}
+#la{
+  font-weight: 800;
+  font-size: 5rem;
+}
+#lo{
+  margin-left:-200px;
+}
+
+/* Optional: Ensure full height alignment */
+.jump-banner {
+  background-color: #f7f0ea; /* Light cream outer background */
+}
+.video-banner {
+  background: url('./../image/girl.png') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.3); /* subtle dark overlay for better text readability */
+  z-index: 1;
+  position: absolute;
+}
+
+.video-banner .content {
+  z-index: 2;
+  position: relative;
+  /* max-width: 800px; */
+  padding: 2rem;
+}
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  display: none; /* Hide by default */
+}
+
+
+.play-icon {
+  z-index: 3;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+.play-icon img {
+  width: 100%;
+  height: auto;
+}
+/* 
+.footer a:hover {
+  text-decoration: underline;
+} */
+.footer {
+  font-family: "Poppins";
+      font-size: 21px;
+
+}
+h6{
+  font-size: 25px !important;
+}
+.footer-bottom {
+  background: rgba(112, 131, 137, 0.2) !important;
+
+  color:rgba(146, 146, 146, 1);
+}
+.footer-bottom span {
+ color: rgba(200, 0, 0, 1)}
+
+
+
+
+ @media screen and (max-width:1280px)
+  {.image-slider-wrapper {
+    position: relative;
+    height: 330px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+  
+ }
+
+/* 1024px and below */
+@media(min-width: 993px) and (max-width: 1060px){
+  .navbar-nav .nav-item {
+    margin: 0 10px;
+
+  }
+.navbar{
+          font-size: 14px !important;
+
+}
+  .search-bar {
+    max-width: 320px;
+  }
+
+  .custom-input-group input::placeholder {
+    font-size: 14px;
+  }
+  .your-motion,.master {font-size: 2rem;
+}
+.image-slider-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.card-title {
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    font-size: 18px;
+}
+.card-text {
+    text-align: justify;
+    color: #000000;
+    font-size: 16px;
+}
+.slider-progress {
+    position: absolute;
+    top: 9px;
+    left: 25px;
+    display: flex;
+    gap: 5px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 80%;
+    text-align: center;
+}
+.card-button {
+    background-color: #C80000;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    color: #FFFFFF;
+}
+.footer {
+    font-family: "Poppins";
+    font-size: 18px;
+}
+.jump-image
+ {
+    max-height: 350px !important;
+    object-fit: contain;
+    width: auto;
+}
+#la {
+    font-weight: 800;
+    font-size: 3rem;
+}
+.text-gradient-blue-black {
+  font-size: 1.5rem;;
+
+}
+.speed, .ropes{
+  font-size: 5rem;;
+}
+
+
+}
+ @media  (max-width:912px) {
+  .container{
+    max-width: 912px;
+  }
+  .image-slider-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.card-title {
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    font-size: 17px;
+}
+.card-text {
+    text-align: justify;
+    color: #000000;
+    font-size: 15px;
+}
+.card-button {
+    background-color: #C80000;
+    border: none;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 8px;
+    color: #FFFFFF;
+}
+.footer {
+    font-family: "Poppins";
+    font-size: 17px;
+}
+.video-banner {
+    background: url(./../image/girl.png) no-repeat center center;
+    background-size: cover;
+    height: 65vh;
+    position: relative;
+}
+
+#la {
+    font-weight: 800;
+    font-size: 3rem;
+}
+.jump-image
+ {
+    max-height: 350px !important;
+    object-fit: contain;
+    width: auto;
+}
+.speed, .ropes{
+  font-size: 5rem;;
+}
+.category-section {
+    padding: 30px;
+    /* text-align: center; */
+}
+  .your-motion,.master {font-size: 2rem;
+}
+ }

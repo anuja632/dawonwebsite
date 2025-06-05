@@ -1,0 +1,199 @@
+
+
+/* 1024px and below */
+@media (max-width: 1024px) {
+  .navbar-nav .nav-item {
+    margin: 0 10px;
+
+  }
+.navbar{
+          font-size: 14px !important;
+
+}
+  .search-bar {
+    max-width: 320px;
+  }
+
+  .custom-input-group input::placeholder {
+    font-size: 14px;
+  }
+  .your-motion,.master {font-size: 2rem;
+}
+.image-slider-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.card-title {
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    font-size: 18px;
+}
+.card-text {
+    text-align: justify;
+    color: #000000;
+    font-size: 16px;
+}
+
+}
+/* 992px and below (Bootstrap lg breakpoint) */
+@media (max-width: 992px) {
+  .search-bar {
+    margin: 15px 0;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .navbar-nav {
+    align-items: flex-start !important;
+    padding-top: 10px;
+  }
+
+  .navbar-collapse {
+    background-color: #000; /* Optional: make collapse area match navbar */
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .nav-item {
+    margin: 5px 0;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+}
+
+/* 768px and below (Bootstrap md breakpoint) */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 40px;
+  }
+
+  .custom-input-group {
+    padding: 4px 8px;
+  }
+
+  .custom-input-group i {
+    font-size: 16px;
+  }
+
+  .custom-input-group input {
+    font-size: 14px;
+  }
+}
+
+/* 550px and below (mobile-focused) */
+@media (max-width: 550px) {
+  .navbar {
+    font-size: 16px;
+  }
+
+  .logo-img {
+    height: 35px;
+  }
+
+  .nav-link span {
+    font-size: 12px;
+  }
+
+  .custom-input-group input::placeholder {
+    font-size: 12px;
+  }
+
+  .custom-input-group i {
+    font-size: 14px;
+  }
+
+  .custom-input-group {
+    padding: 3px 6px;
+  }
+}
+
+
+
+
+
+
+
+
+    @media (max-width: 768px) {
+      .hero {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .hero-content {
+        padding: 40px 20px;
+      }
+    }
+
+    /* ========== MEDIA QUERIES FOR RESPONSIVENESS ========== */
+
+/* Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  .carousel-caption {
+    padding: 1.5rem;
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    left:0%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-caption p {
+    font-size: 18px;
+    width: auto;
+    text-align: center;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .owl-nav {
+    padding: 0 10px;
+  }
+
+  .owl-prev, .owl-next {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .speed,.ropes{
+    font-size: 5rem;
+  }
+  
+  .row .justify-content-center{
+    justify-content: start !important;
+  }
+}
+
+/* Phones (max-width: 576px) */
+@media (max-width: 576px) {
+  .carousel-caption h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 16px;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .owl-prev, .owl-next {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+
+}
