@@ -556,12 +556,12 @@ h6 {
   }
   
 }
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav {
         flex-direction: row;
         font-size: 13px;
     }
-}
+} */
 
 /* Mobile phones */
 @media (max-width: 575.98px) {
