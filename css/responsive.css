@@ -1,7 +1,37 @@
 
 
+
+ @media screen and (max-width:1280px)
+  {.image-slider-wrapper {
+    position: relative;
+    height: 330px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.position-relative img {
+    height: auto;
+    object-fit: contain;
+    background-color: #fff;
+}
+  .shop-now-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 7px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+  
+ }
+
 /* 1024px and below */
-@media (max-width: 1024px) {
+@media(min-width: 993px) and (max-width: 1200px){
   .navbar-nav .nav-item {
     margin: 0 10px;
 
@@ -16,6 +46,35 @@
 
   .custom-input-group input::placeholder {
     font-size: 14px;
+  }
+    .owl-carousel .item {
+    height: 60vh;
+  }
+    
+  .carousel-caption {
+    max-width: 70%;
+    padding: 1.5rem;
+    left: 6%;
+  }
+  
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.1rem;
+    width: 70%;
+  }
+  
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+  
+  .owl-prev, .owl-next {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
   .your-motion,.master {font-size: 2rem;
 }
@@ -35,165 +94,520 @@
     color: #000000;
     font-size: 16px;
 }
-
+.slider-progress {
+    position: absolute;
+    top: 9px;
+    left: 25px;
+    display: flex;
+    gap: 5px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 80%;
+    text-align: center;
 }
-/* 992px and below (Bootstrap lg breakpoint) */
-@media (max-width: 992px) {
-  .search-bar {
-    margin: 15px 0;
-    max-width: 100%;
-    justify-content: center;
-  }
-
-  .navbar-nav {
-    align-items: flex-start !important;
-    padding-top: 10px;
-  }
-
-  .navbar-collapse {
-    background-color: #000; /* Optional: make collapse area match navbar */
-    padding: 1rem;
-    border-radius: 10px;
-  }
-
-  .nav-item {
-    margin: 5px 0;
-  }
-
-  .nav-link {
+.card-button {
+    background-color: #C80000;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    color: #FFFFFF;
+}
+.footer {
+    font-family: "Poppins";
     font-size: 18px;
-  }
 }
+.jump-image
+ {
+    max-height: 350px !important;
+    object-fit: contain;
+    width: auto;
+}
+#la {
+    font-weight: 800;
+    font-size: 3rem;
+}
+.text-gradient-blue-black {
+  font-size: 1.5rem;;
 
-/* 768px and below (Bootstrap md breakpoint) */
-@media (max-width: 768px) {
-  .logo-img {
-    height: 40px;
-  }
-
-  .custom-input-group {
-    padding: 4px 8px;
-  }
-
-  .custom-input-group i {
+}
+.speed, .ropes{
+  font-size: 5rem;;
+}
+.play-icon img {
+    width: 50%;
+    height: auto;
+}
+.video-banner {
+    background: url(./../image/girl.png) no-repeat center center;
+    background-size: cover;
+    height: 45vh;
+    position: relative;
+}
+.shop-now-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
     font-size: 16px;
-  }
-
-  .custom-input-group input {
-    font-size: 14px;
-  }
 }
 
-/* 550px and below (mobile-focused) */
-@media (max-width: 550px) {
-  .navbar {
-    font-size: 16px;
+}
+ @media  (max-width:912px) {
+  .container{
+    max-width: 912px;
   }
-
-  .logo-img {
-    height: 35px;
-  }
-
-  .nav-link span {
-    font-size: 12px;
-  }
-
-  .custom-input-group input::placeholder {
-    font-size: 12px;
-  }
-
-  .custom-input-group i {
-    font-size: 14px;
-  }
-
-  .custom-input-group {
-    padding: 3px 6px;
-  }
+  .image-slider-wrapper {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.card-title {
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    font-size: 17px;
+}
+.card-text {
+    text-align: justify;
+    color: #000000;
+    font-size: 15px;
+}
+.card-button {
+    background-color: #C80000;
+    border: none;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 8px;
+    color: #FFFFFF;
+}
+.footer {
+    font-family: "Poppins";
+    font-size: 17px;
+}
+.video-banner {
+    background: url(./../image/girl.png) no-repeat center center;
+    background-size: cover;
+    height: 35vh;
+    position: relative;
+}
+#io{
+  padding-top: 0px !important;
 }
 
-
-
-
-
-
-
-
-    @media (max-width: 768px) {
-      .hero {
-        justify-content: center;
-        text-align: center;
-      }
-
-      .hero-content {
-        padding: 40px 20px;
-      }
+#la {
+    font-weight: 800;
+    font-size: 3rem;
+}
+.jump-image
+ {
+    max-height: 350px !important;
+    object-fit: contain;
+    width: auto;
+}
+.speed, .ropes{
+  font-size: 5rem;;
+}
+.category-section {
+    padding: 30px;
+    /* text-align: center; */
+}
+  .your-motion,.master {font-size: 2rem;
+}
+    .carousel-caption {
+        max-width: 70% !important;
+        padding: 1.5rem;
+        left: 6% !important;
     }
+.carousel-caption p{
+  width:70% !important;
+}
+  .owl-carousel .item {
+    height: 50vh !important;
+  }
+  .shop-now-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 3px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+ }
+
+
+ @media (min-width: 768px)  and (max-width:900px){
+  .card-title {
+    font-size: 20px;
+    text-align: center;
+  }
+#op{
+    font-size: 0.8rem !important;
+}
+
+
+
+  .card-text {
+    font-size: 16px;
+  }
+
+
+  .image-slider-wrapper {
+    height: 200px;
+  }
+
+  .slider-progress span {
+    width: 30px;
+  }
+#ad{
+  text-align: center;
+}
+    .card-button {
+        background-color: #C80000;
+        border: none;
+        padding: 5px;
+        font-size: 11px;
+        border-radius: 8px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+        .speed, .ropes {
+        font-size: 4rem;
+    }
+     .nav-link.d-flex {
+    flex-direction: row !important;
+    gap:10px;
+  }
+      #la {
+        font-weight: 800;
+        font-size: 2rem;
+    }
+.footer{
+  font-size: 14px;
+}
+
+h6 {
+    font-size: 19px !important;
+}
+.footer i {
+  font-size: 1.3rem; /* smaller size, adjust as needed */
+}
+
+
+    .carousel-caption {
+        max-width: 70% !important;
+        padding: 1.5rem;
+        left: 8% !important;
+    }
+.carousel-caption p{
+  width:70% !important;
+}
+.your-motion, .master{
+  font-size: 1.5rem;
+}
+.slider-progress {
+    position: absolute;
+    top: 9px;
+    left: 18px;
+    display: flex
+;
+    gap: 5px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 82%;
+    text-align: center;
+}
+.play-icon img {
+    width: 50%;
+    height: auto;
+}
+.video-banner {
+    background: url(./../image/girl.png) no-repeat center center;
+    background-size: cover;
+    height: 35vh;
+    position: relative;
+}
+.shop-now-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        padding: 1px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 13px;
+    }
+    .pp{
+      font-size: 18px !important;
+    }
+      #wa{
+    font-size: 3.5rem !important;
+    margin-left:10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .row .justify-content-center {
+    justify-content: start !important;
+  }
+     .nav-link.d-flex {
+    flex-direction: row !important;
+    gap:10px;
+  }
+#al{
+  row-gap: 20px;
+}
+  .card-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .card-text {
+    font-size: 15px;
+  }
+
+  .card-button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .image-slider-wrapper {
+    height: 500px;
+  }
+
+  .slider-progress span {
+    width: 25px;
+  }
+
+  .card {
+    padding: 15px 10px 0px 10px;
+  }
+  .card-title{
+    text-align: start;
+    font-size: 20px;
+  }
+  #ad{
+    text-align: start;
+  }
+  #lo {
+    margin-left: -100px;
+}
+#wa{
+  font-size: 4rem;
+}
+}
+@media (max-width: 344px) {
+#wa{
+  font-size: 2.5rem;
+}
+}
 
     /* ========== MEDIA QUERIES FOR RESPONSIVENESS ========== */
 
-/* Tablets (max-width: 991px) */
-@media (max-width: 991px) {
+/* Smaller tablets and large phones */
+@media (max-width: 991.98px) {
+  .owl-carousel .item {
+    height: 60vh;
+  }
+  
   .carousel-caption {
-    padding: 1.5rem;
     max-width: 90%;
-    text-align: center;
-    margin: 0 auto;
-    left:0%;
+    padding: 1.5rem;
+    left: 3%;
   }
-
+  
   .carousel-caption h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
-
+  
   .carousel-caption p {
-    font-size: 18px;
-    width: auto;
-    text-align: center;
+    font-size: 1.1rem;
+    width: 100%;
   }
-
+  
   .carousel-caption .btn {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     padding: 10px 20px;
   }
-
-  .owl-nav {
-    padding: 0 10px;
-  }
-
+  
   .owl-prev, .owl-next {
     width: 40px;
     height: 40px;
     font-size: 16px;
   }
-  .speed,.ropes{
-    font-size: 5rem;
-  }
   
-  .row .justify-content-center{
-    justify-content: start !important;
-  }
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        font-size: 13px;
+    }
 }
 
-/* Phones (max-width: 576px) */
-@media (max-width: 576px) {
+/* Mobile phones */
+@media (max-width: 575.98px) {
+  .owl-carousel .item {
+    height: 50vh;
+  }
+  
+  .carousel-caption {
+    max-width: 75%;
+    padding: 1rem;
+    left: 12% !important;
+  }
+  
   .carousel-caption h1 {
     font-size: 1.5rem;
   }
-
+  
   .carousel-caption p {
-    font-size: 16px;
+    font-size: 1rem;
+    width: 100%;
   }
-
+  
   .carousel-caption .btn {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     padding: 8px 16px;
   }
-
+  
   .owl-prev, .owl-next {
     width: 35px;
     height: 35px;
     font-size: 14px;
   }
+      .fs-5 {
+        font-size: 1.3rem
+ !important;
+    }
+    .play-icon img {
+    width: 50%;
+    height: auto;
+}
+.video-banner {
+    background: url(./../image/girl.png) no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+}
+#aq{
+  width:170px;
+}
+    #la {
+        font-weight: 800;
+        font-size: 2.2rem
+;
+    }
+}
 
+/* Very small devices */
+@media (max-width: 375px) {
+  .carousel-caption h1 {
+    font-size: 1.2rem;
+  }
+.carousel-caption{
+      left:15% !important;
+
+}
+  
+  .carousel-caption p {
+    font-size: 0.9rem;
+    width:90%;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+.image-slider-wrapper{
+  height:340px;
+}
+    #lo {
+        margin-left: -180px;
+    }
+    .play-icon {
+    z-index: 3;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+    .shop-now-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        padding: 1px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 13px;
+    }
+}
+@media (min-width:380px) and (max-width: 500px) {
+.image-slider-wrapper{
+  height:370px;
+}
+  #lo {
+    margin-left: -160px;
+}
+
+  .shop-now-btn {
+    font-size: 14px;
+  }
+  #wa{
+    font-size: 3.5rem !important;
+    margin-left:10px;
+  }
+  .accordion-button::before{
+    font-size: 18px;
+  }
+  .accordion-button {
+    font-size: 15px;
+  }
+   .canvas-dropdown {
+    width: 100vw;
+    left: 0;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .dropdown-card img {
+    height: 100px;
+  }
+
+  .canvas-dropdown ul li {
+    font-size: 14px;
+  }
+
+  .dropdown-card .card-footer {
+    font-size: 14px;
+  }
 
 }
