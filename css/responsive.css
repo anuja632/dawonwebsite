@@ -246,7 +246,7 @@
     width: auto;
 }
 .speed, .ropes{
-  font-size: 5rem;;
+  font-size: 4rem;;
 }
 .category-section {
     padding: 30px;
@@ -625,6 +625,10 @@ h6 {
         font-size: 2.2rem
 ;
     }
+      #wa{
+    font-size: 3.5rem !important;
+    margin-left:10px;
+  }
 }
 
 /* Very small devices */
