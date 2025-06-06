@@ -631,12 +631,12 @@ h6{
   color: white;
 }
 
-/* Default image height control */
+/* Default image height control
 .position-relative img {
   height: 250px;
   object-fit: contain;
   background-color: #fff;
-}
+} */
 h5{
   font-family: "Roboto Condensed";
 }
