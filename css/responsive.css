@@ -27,6 +27,17 @@
     transition: all 0.3s ease;
     font-size: 16px;
 }
+.canvas-dropdown {
+    display: none;
+    position: absolute;
+    top: 150%;
+    left: -690px;
+    width: 1200px;
+    background-color: #000;
+    z-index: 9999;
+    border-radius: 10px;
+    padding: 1rem;
+}
   
  }
 
@@ -161,7 +172,7 @@
 }
   .canvas-dropdown {
     width: 1000px;
-    left: -650px;
+    left: -615px;
   }
   .dropdown-card img {
     height: 180px;
@@ -289,6 +300,9 @@
 
   .dropdown-card .card-footer {
     font-size: 14px;
+  }
+  #wa{
+    font-size: 4rem;
   }
 
  }
