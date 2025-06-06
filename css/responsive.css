@@ -592,19 +592,22 @@ h6 {
     font-size: 15px;
   }
    .canvas-dropdown {
-    width: 100vw;
+    width: 100%;
     left: 0;
     flex-direction: column;
     padding: 1rem;
   }
-
+/* 
   .dropdown-card img {
     height: 100px;
-  }
+  } */
 
   .canvas-dropdown ul li {
     font-size: 14px;
   }
+    .canvas-dropdown .row{
+      row-gap:30px;
+    }
 
   .dropdown-card .card-footer {
     font-size: 14px;
