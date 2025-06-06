@@ -11,7 +11,7 @@
 .position-relative img {
     height: auto;
     object-fit: contain;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
   .shop-now-btn {
     position: absolute;
