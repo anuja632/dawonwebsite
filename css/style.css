@@ -20,7 +20,7 @@ html, body {
     display: none;
     position: absolute;
     top: 150%;  /* right below the link */
-    left: -1050%;
+    left: -650px;
     width: 1200px;
     background-color: #000;
     z-index: 9999;
