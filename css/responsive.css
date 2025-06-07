@@ -48,7 +48,7 @@
 
   }
 .navbar{
-          font-size: 14px !important;
+          font-size: 13px !important;
 
 }
   .search-bar {
@@ -61,6 +61,15 @@
     .owl-carousel .item {
     height: 60vh;
   }
+  .play-icon {
+    z-index: 3;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
     
   .carousel-caption {
     max-width: 70%;
@@ -74,7 +83,7 @@
   
   .carousel-caption p {
     font-size: 1.1rem;
-    width: 70%;
+    width: 50%;
   }
   
   .carousel-caption .btn {
@@ -127,7 +136,10 @@
 }
 .footer {
     font-family: "Poppins";
-    font-size: 18px;
+    font-size: 14px;
+}
+h6 {
+    font-size: 17px !important;
 }
 .jump-image
  {
@@ -189,6 +201,7 @@
   .dropdown-card .card-footer {
     font-size: 14px;
   }
+  
 }
  @media  (max-width:912px) {
   .container{
@@ -223,7 +236,7 @@
 }
 .footer {
     font-family: "Poppins";
-    font-size: 17px;
+    font-size: 16px;
 }
 .video-banner {
     background: url(./../image/girl.png) no-repeat center center;
