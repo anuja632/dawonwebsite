@@ -128,6 +128,242 @@
 </nav>
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Dawon Athletics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f6f7;
+    }
+
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 3rem auto;
+      display: flex;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      background-color: #fff;
+    }
+
+    .left-panel {
+      width: 40%;
+      background: linear-gradient(135deg, #f4e9e2);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      max-width: 260px;
+      border-radius: 12px;
+      overflow: hidden;
+      /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding:0px !important;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); */
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .image-label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .right-panel {
+      width: 60%;
+      padding: 3rem;
+    }
+
+    .right-panel h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .right-panel p {
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+
+    .options {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .options label {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .form-text {
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    .form-text a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .btn {
+      background-color:#c80000;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: background-color 0.3s ease;
+      width:200px;
+    }
+    
+
+
+    @media (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
+      }
+
+      .left-panel, .right-panel {
+        width: 100%;
+        padding: 2rem;
+      }
+
+      .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content-wrapper">
+    
+    <!-- Left Image Panel -->
+    <div class="left-panel">
+      <div class="card">
+        <span class="image-label">Speed rope</span>
+        <img src="https://img.freepik.com/free-photo/young-attractive-woman-doing-sport-exercises-morning-sunrise-sea-beach-sports-wear-healthy-lifestyle-listening-music-earphones-wearing-pink-windbreaker-jacket-jumping-jump-rope_285396-5593.jpg?w=740" alt="Montreal">
+      </div>
+      <div class="card">
+        <span class="image-label">Beast rope</span>
+        <img src="https://m.media-amazon.com/images/I/61skhELN15L._AC_UF1000,1000_QL80_.jpg" alt="Madrid">
+      </div>
+      <div class="card">
+        <span class="image-label">Classic rope</span>
+        <img src="https://img.freepik.com/premium-photo/boy-doing-skipping-jump-with-rope-jumping-rope-lose-weight-more_181020-3926.jpg" alt="Tokyo">
+      </div>
+    </div>
+
+    <!-- Right Contact Form Panel -->
+    <div class="right-panel">
+      <h2>Contact Dawon Athletics</h2>
+      <p>Our team will reach out to you based on your preferences.</p>
+
+<form action="https://formsubmit.co/dawonatheletics@gmail.com" method="POST">
+  <!-- Hidden fields for FormSubmit -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Inquiry from Dawon Athletics Website">
+  <input type="hidden" name="_next" value="https://dawonathletics.com/thankyou.html">
+
+  <!-- Interest options -->
+  <div class="options">
+    <label><input type="radio" name="interest" value="Speed Rope" checked> Speed Rope</label>
+    <label><input type="radio" name="interest" value="Beast Rope"> Beast Rope</label>
+    <label><input type="radio" name="interest" value="Astar Rope"> Astar Rope</label>
+    <label><input type="radio" name="interest" value="Classic Rope"> Classic Rope</label>
+    <label><input type="radio" name="interest" value="Rope Accessories"> Rope Accessories</label>
+  </div>
+
+  <!-- Personal info -->
+  <div class="form-row">
+    <input type="text" name="first_name" placeholder="First Name" required>
+    <input type="text" name="last_name" placeholder="Last Name" required>
+  </div>
+
+  <div class="form-row">
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+  </div>
+
+  <input type="text" name="company" placeholder="Company / Gym Name (optional)">
+  <textarea name="message" placeholder="Additional Information"></textarea>
+
+  <div class="form-text">
+    By submitting this form, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+  </div>
+
+  <button type="submit" class="btn">Get in touch</button>
+</form>
+
+    </div>
+  </div>
+
+</body>
+</html>
+
+
 
 
 <!-- footer -->
