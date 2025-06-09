@@ -106,6 +106,8 @@
       display: flex;
       gap: 1.5rem;
       margin-bottom: 1.5rem;
+                /* flex-wrap: wrap; */
+
     }
 
     .options label {
@@ -117,6 +119,7 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
+
     }
 
     .form-row {
@@ -168,7 +171,15 @@
         flex-direction: column;
       }
 
-      .left-panel, .right-panel {
+      .left-panel{
+        width: 100%;
+        flex-direction: row;
+        padding: 2rem;
+      }
+      .options{
+        flex-wrap: wrap;
+      }
+.right-panel {
         width: 100%;
         padding: 2rem;
       }
@@ -176,7 +187,28 @@
       .form-row {
         flex-direction: column;
       }
+      
+    .card img {
+      width: 100%;
+      height: 200px;
+      display: block;
+      border-radius: 12px;
     }
+
+    }
+@media (max-width: 500px) {
+  .left-panel {
+    width: 100%;
+    display: flex !important;      /* Use flex if you're applying gap */
+    flex-direction: column;        /* Stack items vertically */
+    row-gap: 20px;                 /* Space between items vertically */
+    padding: 2rem;
+  }
+
+
+}
+
+
 </style>
 </head>
 <body>
