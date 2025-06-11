@@ -695,10 +695,232 @@ font-size: 25px;}
       scroll-behavior: smooth;
     }
 
-    .sticky-top {
+    /* .sticky-top {
       top: 80px;
-    }
+    } */
 
     .section-content {
       margin-bottom: 2rem;
     }
+
+     .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .product-image {
+      flex: 1 1 300px;
+      padding: 2rem;
+    }
+    .product-info {
+      flex: 1 1 300px;
+      padding: 2rem;
+    }
+    .product-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .price {
+      font-size: 1.4rem;
+      color: #000;
+    }
+    .original-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 1rem;
+      margin-left: 10px;
+    }
+    .add-to-cart {
+      background: #c80000;
+      border: none;
+      color: #fff;
+      padding: 10px 30px;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: 0.3s ease;
+    }
+    .add-to-cart:hover {
+      background: #b3001a;
+    }
+    .thumbs img {
+      width: 150px;
+      margin-top: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .thumbs img.active {
+      border-color: #e60023;
+    }
+.accordion .accordion-item {
+  margin-bottom: 20px;
+}
+
+    .accordion-button:not(.collapsed) {
+      background-color: #f8f9fa;
+      color: #000;
+      
+    }
+    .accordion-button::after {
+      display: none !important;
+    }
+    .accordion-button .toggle-icon {
+      margin-left: auto;
+    }
+    .accordion-button.collapsed .toggle-icon i {
+      transform: rotate(0deg);
+    }
+    .accordion-button:not(.collapsed) .toggle-icon i {
+      transform: rotate(180deg);
+      transition: transform 0.3s ease;
+    }
+.section-performance {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.performance-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 70%;
+  border: 2px solid #000;
+}
+
+.performance-img {
+  width: 100%;
+  height: 600px;
+  display: block;
+}
+
+.cta-box {
+  position: absolute;
+  top: 60%;
+  right: -40%;
+  transform: translateY(-80%);
+  background: linear-gradient(to right, #8b0000, #000);
+  color: white;
+  padding: 40px;
+  text-align: center;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.cta-box h2 {
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.cta-box .btn-outline-light {
+  border: 2px solid #fff;
+  font-weight: 500;
+  padding: 10px 20px;
+  font-size: 14px;
+  width:250px;
+  margin-left:20%;
+}
+
+    /* Key Materials Section */
+    .key-materials-section {
+      background-color: #000; /* black background */
+      /* padding: 30px 0; */
+    }
+
+    .key-materials-title {
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      color: #fff;
+    
+    }
+
+    /* Tabs */
+    .nav-tabs .nav-link {
+      position: relative;
+      color: #888;
+      font-weight: 600;
+      margin: 0 10px;
+      border: none !important;
+      /* background: transparent; */
+      text-transform: uppercase;
+      padding: 8px 16px;
+      transition: color 0.3s ease;
+    }
+     .nav-tabs{
+      border: none !important;
+     }
+    /* Optional: Hover underline effect */
+    .nav-tabs .nav-link:hover::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 2px;
+    }
+
+    /* Material Content */
+    .material-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .tab-content h4 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .tab-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #ccc;
+      width: 450px;
+      text-align: justify;
+    }
+    .owl-nav {
+  display: none !important;
+}
+.card {
+  position: relative;
+}
+
+.carousel-progress {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  /* top:10px; */
+  height: 4px;
+  background-color: #eee;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.carousel-progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #d10000; /* Red */
+  transition: width 0s;
+}
+

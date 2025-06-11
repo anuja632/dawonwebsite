@@ -12,88 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f9f9f9;
-      padding: 2rem;
-    }
-    .product-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      overflow: hidden;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .product-image {
-      flex: 1 1 300px;
-      padding: 2rem;
-    }
-    .product-info {
-      flex: 1 1 300px;
-      padding: 2rem;
-    }
-    .product-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-    }
-    .price {
-      font-size: 1.4rem;
-      color: #000;
-    }
-    .original-price {
-      text-decoration: line-through;
-      color: gray;
-      font-size: 1rem;
-      margin-left: 10px;
-    }
-    .add-to-cart {
-      background: #e60023;
-      border: none;
-      color: #fff;
-      padding: 10px 30px;
-      font-weight: bold;
-      border-radius: 50px;
-      transition: 0.3s ease;
-    }
-    .add-to-cart:hover {
-      background: #b3001a;
-    }
-    .thumbs img {
-      width: 150px;
-      margin-top: 20px;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      margin-right: 10px;
-      cursor: pointer;
-    }
-    .thumbs img.active {
-      border-color: #e60023;
-    }
-.accordion .accordion-item {
-  margin-bottom: 20px;
-}
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-    .accordion-button:not(.collapsed) {
-      background-color: #f8f9fa;
-      color: #000;
-      
-    }
-    .accordion-button::after {
-      display: none !important;
-    }
-    .accordion-button .toggle-icon {
-      margin-left: auto;
-    }
-    .accordion-button.collapsed .toggle-icon i {
-      transform: rotate(0deg);
-    }
-    .accordion-button:not(.collapsed) .toggle-icon i {
-      transform: rotate(180deg);
-      transition: transform 0.3s ease;
-    }
-  </style>
 </head>
 <body>
 <!-- Navbar -->
@@ -216,13 +140,23 @@
       <p class="price">₹2,000 <span class="text-muted text-decoration-line-through">₹3,000</span></p>
       <p>Built for quick spins and smooth transitions. Ideal for cardio, coordination, and high-intensity sessions.</p>
 
-      <div class="mb-3 d-flex align-items-center">
-        <button class="btn btn-outline-dark me-2" onclick="decreaseQty()">-</button>
-        <span id="qty" class="mx-2">1</span>
-        <button class="btn btn-outline-dark ms-2" onclick="increaseQty()">+</button>
-      </div>
+      <div class="d-flex align-items-center gap-3">
+  <!-- Quantity Control Button -->
+  <div class="d-flex align-items-center gap-3">
+  <!-- Quantity Control Group -->
+  <div class="btn-group border rounded-pill overflow-hidden" role="group">
+    <button class="btn px-3" onclick="decreaseQty()">-</button>
+    <span id="qty" class="btn btn-light px-3">1</span>
+    <button class="btn  px-3" onclick="increaseQty()">+</button>
+  </div>
 
-      <button class="add-to-cart">ADD TO CART</button>
+  <!-- Add to Cart Button -->
+  <button class="btn add-to-cart" >ADD TO CART</button>
+</div>
+
+  
+</div>
+
       <div class="thumbs d-flex justify-content-center">
         <img src="image/dawon.jpg" onclick="changeImage(this)" class="active">
         <img src="image/dawon1.9 (2).png" onclick="changeImage(this)">
@@ -236,7 +170,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingSpec">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpec" aria-expanded="true" aria-controls="collapseSpec" style="color:#c80000">
-              <i class="fas fa-clipboard-check me-2 text-danger"></i>
+              <img src="image/Format list bulleted.png" width="20px"style="margin-right: 8px;">
               PRODUCT SPEC
               <!-- <span class="toggle-icon"><i class="fas fa-minus text-danger"></i></span> -->
             </button>
@@ -269,7 +203,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFeatures">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFeatures" aria-expanded="false" aria-controls="collapseFeatures" style="color:#c80000">
-              <i class="fas fa-clipboard-check me-2 text-danger"></i>
+              <img src="image/Test Passed.png" width="20px"style="margin-right: 8px;">
               PRODUCT FEATURES
               <!-- <span class="toggle-icon"><i class="fas fa-plus text-danger"></i></span> -->
             </button>
@@ -330,6 +264,289 @@
     </div>
   </div>
 </div>
+<div class="container">
+  <h2 class="key-materials-title text-center">KEY MATERIALS</h2>
+  <section class="key-materials-section">
+<div class="row align-items-center">
+      <!-- Left Images -->
+      <div class="col-md-5 mb-4 mb-md-0 position-relative">
+        <img id="img-steel" src="image/strain.png" alt="Stainless Steel" class="material-image">
+        <img id="img-aluminum" src="image/Aliminum.jpg" alt="Aluminium" class="material-image d-none">
+        <img id="img-spring" src="image/spring1.png" alt="Spring Steel" class="material-image d-none">
+        <img id="img-carbon" src="image/carbon.png" alt="High Carbon Steel" class="material-image d-none">
+      </div>
+
+      <!-- Right Tabs + Content -->
+      <div class="col-md-7">
+        <ul class="nav nav-tabs mb-4" id="materialTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="steel-tab" data-bs-toggle="tab" data-bs-target="#steel" type="button" role="tab">STAINLESS STEEL</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aluminum-tab" data-bs-toggle="tab" data-bs-target="#aluminum" type="button" role="tab">ALUMINIUM</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="spring-tab" data-bs-toggle="tab" data-bs-target="#spring" type="button" role="tab">SPRING STEEL</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="carbon-tab" data-bs-toggle="tab" data-bs-target="#carbon" type="button" role="tab">HIGH CARBON STEEL</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="materialTabContent">
+          <div class="tab-pane fade show active" id="steel" role="tabpanel">
+            <h4>STAINLESS STEEL</h4>
+            <p>
+              Stainless steel is a corrosion resistant iron alloy, Dawon uses 316 L stainless steel.
+              Known for its high wear & tear property, this material is used for shafts, bearings, and
+              rope lock housings. Just ideal choice for high performance weighted jump ropes.
+            </p>
+          </div>
+
+          <div class="tab-pane fade" id="aluminum" role="tabpanel">
+            <h4>ALUMINIUM</h4>
+            <p>
+              Aluminum is a lightweight metal, Dawon uses 6606 aluminium alloy.
+              Known for its excellent mechanical properties, this material is used for handles,
+              providing lightweight handles for agility & speed.
+            </p>
+          </div>
+
+          <div class="tab-pane fade" id="spring" role="tabpanel">
+            <h4>SPRING STEEL</h4>
+            <p>
+              Spring steel is a steel alloy with high elasticity. Dawon uses AISI 1095 steel for withstanding
+              significant stress before permanently deforming. Lock mechanism hooks and retainer rings are made
+              from this material, retaining high performance during rigorous jump rope routines.
+            </p>
+          </div>
+
+          <div class="tab-pane fade" id="carbon" role="tabpanel">
+            <h4>HIGH CARBON STEEL</h4>
+            <p>
+              High Carbon Steel content goes here... (Please provide content if you want it filled in.)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<section class="section-performance">
+  <div class="container">
+    <div class="position-relative performance-wrapper">
+
+      <!-- Image -->
+      <img src="image/card12.png" alt="Performance Ropes" class="performance-img">
+
+      <!-- CTA Box Positioned Over Image -->
+      <div class="cta-box">
+        <h2>Core Collection of<br>Performance Ropes</h2>
+        <a href="#" class="btn btn-outline-light mt-3">Explore Skipping Guide</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="container py-5">
+  <h2 class="mb-4 fw-bold">You May Also Like</h2>
+<div class="owl-carousel-wrapper position-relative">
+  <div class="owl-carousel owl-theme">
+   
+    <!-- Card 1 -->
+    <div class="card h-100 shadow-sm">
+      <div class="position-relative">
+        <div class="image-slider-wrapper card-img-top" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+          <div class="slider-progress">
+            <span><div class="fill"></div></span>
+            <span><div class="fill"></div></span>
+            <span><div class="fill"></div></span>
+            <span><div class="fill"></div></span>
+          </div>
+          <img src="image/dawon1.9.png" class="active" alt="img 1" />
+          <img src="image/speed6.png" alt="img 2" />
+          <img src="image/speed11.png" alt="img 3" />
+          <img src="image/speed3.png" alt="img 4" />
+          <span class="badge bg-dark position-absolute top-0 end-0 m-3">SAVE 10%</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dawon Athletics - Speed Ropes</h5>
+        <p class="mb-1 text-dark fw-bold">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span class="text-dark">500+ Reviews</span>
+        </p>
+        <p class="card-text text-dark">Built for quick spins and smooth transitions. Ideal for cardio, coordination.</p>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+          <div>
+            <span class="fw-bold fs-5">₹ 2,000</span>
+            <span class="text-decoration-line-through text-muted">₹ 8,000</span>
+          </div>
+          <a href="dawonproductcard.html" class="card-button">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+        <div class="card h-100 shadow-sm">
+            <div class="position-relative">
+
+        <div class="image-slider-wrapper card-img-top "  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+          <!-- Progress bar -->
+
+      <div class="slider-progress">
+        <span><div class="fill"></div></span>
+        <span><div class="fill"></div></span>
+        <span><div class="fill"></div></span>
+        <span><div class="fill"></div></span>
+      </div>
+
+          <!-- Multiple images -->
+          <img src="image/dawon1.9 (2).png" class="active " alt="img 1" />
+          <img src="image/speed7.png" alt="img 2" />
+          <img src="image/speed8.png" alt="img 3" />
+          <img src="image/speed9.png" alt="img 4" />
+          <!-- Discount badge -->
+          <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 20%</span>
+        </div>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Dawon Athletics - Speed Ropes</h5>
+            <p class="mb-1 text-dark fw-bold" id ="ad">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+ <span class="text-dark">800+ Reviews</span>
+            </p>
+            <p class="card-text text-dark ">
+              All the speed and agility benefits in a  the lightweight set. Perfect for beginners.
+            </p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div>
+                <span class="fw-bold fs-5" id="op">₹ 2,000</span>
+                <span class="text-decoration-line-through text-muted" id="op">₹ 8,000</span>
+              </div>
+              <a href="#" class="card-button">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="card h-100 shadow-sm">
+      <div class="position-relative">
+        <div class="image-slider-wrapper card-img-top" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+          <div class="slider-progress">
+            <span><div class="fill"></div></span>
+            <span><div class="fill"></div></span>
+            <span><div class="fill"></div></span>
+            <span><div class="fill"></div></span>
+          </div>
+          <img src="image/dawon1.9.png" class="active" alt="img 1" />
+          <img src="image/speed6.png" alt="img 2" />
+          <img src="image/speed11.png" alt="img 3" />
+          <img src="image/speed3.png" alt="img 4" />
+          <span class="badge bg-dark position-absolute top-0 end-0 m-3">SAVE 10%</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dawon Athletics - Speed Ropes</h5>
+        <p class="mb-1 text-dark fw-bold">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span class="text-dark">500+ Reviews</span>
+        </p>
+        <p class="card-text text-dark">Built for quick spins and smooth transitions. Ideal for cardio, coordination.</p>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+          <div>
+            <span class="fw-bold fs-5">₹ 2,000</span>
+            <span class="text-decoration-line-through text-muted">₹ 8,000</span>
+          </div>
+          <a href="dawonproductcard.html" class="card-button">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+        <div class="card h-100 shadow-sm">
+            <div class="position-relative">
+
+        <div class="image-slider-wrapper card-img-top "  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+          <!-- Progress bar -->
+
+      <div class="slider-progress">
+        <span><div class="fill"></div></span>
+        <span><div class="fill"></div></span>
+        <span><div class="fill"></div></span>
+        <span><div class="fill"></div></span>
+      </div>
+
+          <!-- Multiple images -->
+          <img src="image/dawon1.9 (2).png" class="active " alt="img 1" />
+          <img src="image/speed7.png" alt="img 2" />
+          <img src="image/speed8.png" alt="img 3" />
+          <img src="image/speed9.png" alt="img 4" />
+          <!-- Discount badge -->
+          <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 20%</span>
+        </div>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Dawon Athletics - Speed Ropes</h5>
+            <p class="mb-1 text-dark fw-bold" id ="ad">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+ <span class="text-dark">800+ Reviews</span>
+            </p>
+            <p class="card-text text-dark ">
+              All the speed and agility benefits in a  the lightweight set. Perfect for beginners.
+            </p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div>
+                <span class="fw-bold fs-5" id="op">₹ 2,000</span>
+                <span class="text-decoration-line-through text-muted" id="op">₹ 8,000</span>
+              </div>
+              <a href="#" class="card-button">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="card h-100 shadow-sm">
+      <div class="position-relative">
+        <div class="image-slider-wrapper card-img-top" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+          <div class="slider-progress">
+            <span><div class="fill"></div></span>
+            <span><div class="fill"></div></span>
+            <span><div class="fill"></div></span>
+            <span><div class="fill"></div></span>
+          </div>
+          <img src="image/dawon1.9.png" class="active" alt="img 1" />
+          <img src="image/speed6.png" alt="img 2" />
+          <img src="image/speed11.png" alt="img 3" />
+          <img src="image/speed3.png" alt="img 4" />
+          <span class="badge bg-dark position-absolute top-0 end-0 m-3">SAVE 10%</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Dawon Athletics - Speed Ropes</h5>
+        <p class="mb-1 text-dark fw-bold">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <span class="text-dark">500+ Reviews</span>
+        </p>
+        <p class="card-text text-dark">Built for quick spins and smooth transitions. Ideal for cardio, coordination.</p>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+          <div>
+            <span class="fw-bold fs-5">₹ 2,000</span>
+            <span class="text-decoration-line-through text-muted">₹ 8,000</span>
+          </div>
+          <a href="dawonproductcard.html" class="card-button">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat card 2, 3, 4, 5, etc. as-is here -->
+
+  </div>
+  <div class="carousel-progress">
+    <div class="carousel-progress-bar"></div>
+  </div>
+</div>
+</div>
+
+
+
+
 
 <!-- footer -->
 <footer class="footer bg-dark text-white pt-5">
@@ -426,6 +643,126 @@
 
   
 </script>
+<!-- Custom Script -->
+<script>
+  const images = {
+    steel: document.getElementById('img-steel'),
+    aluminum: document.getElementById('img-aluminum'),
+    spring: document.getElementById('img-spring'),
+    carbon: document.getElementById('img-carbon'),
+  };
+
+  document.querySelectorAll('#materialTabs .nav-link').forEach(tab => {
+    tab.addEventListener('shown.bs.tab', function () {
+      const targetId = this.getAttribute('data-bs-target').substring(1); // remove '#' from id
+      // Hide all images
+      Object.values(images).forEach(img => img.classList.add('d-none'));
+      // Show the corresponding image
+      images[targetId].classList.remove('d-none');
+    });
+  });
+</script>
+<!-- ✅ jQuery and Owl Carousel Scripts (Place these FIRST) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- ✅ Owl Carousel Initialization (Place AFTER jQuery + Owl Carousel) -->
+<script>
+  $(document).ready(function () {
+    const $carousel = $(".owl-carousel");
+    const $bar = $(".carousel-progress-bar");
+    const duration = 3000; // 3 seconds per slide
+
+    $carousel.owlCarousel({
+      items: 3,
+      loop: true,
+      margin: 15,
+      autoplay: true,
+      autoplayTimeout: duration,
+      autoplayHoverPause: true,
+      smartSpeed: 500,
+      slideBy: 1, // Slide one card at a time
+      responsive: {
+        0: { items: 1 },
+        768: { items: 2 },
+        992: { items: 3 }
+      }
+    });
+
+    function startProgressBar() {
+      $bar.css({ width: "0%", transition: "none" });
+      setTimeout(() => {
+        $bar.css({ width: "30%", transition: `width ${duration}ms linear` });
+      }, 50);
+    }
+
+    function resetProgressBar() {
+      $bar.css({ width: "0%", transition: "none" });
+    }
+
+    startProgressBar();
+
+    $carousel.on("changed.owl.carousel", function () {
+      resetProgressBar();
+      startProgressBar();
+    });
+  });
+</script>
+
+
+<script>
+  function startSlider(container) {
+    const images = container.querySelectorAll("img");
+    const bars = container.querySelectorAll(".slider-progress span .fill");
+    let index = 0;
+
+    container._timers = [];
+
+    const show = (i) => {
+      images.forEach((img, idx) => img.classList.toggle("active", idx === i));
+      bars.forEach((fill, idx) => {
+        fill.style.width = "0%";
+        if (idx === i) {
+          // trigger fill animation
+          setTimeout(() => fill.style.width = "100%", 10);
+        }
+      });
+    };
+
+    show(index);
+
+    function next() {
+      index++;
+      if (index < images.length) {
+        show(index);
+        const t = setTimeout(next, 1000);
+        container._timers.push(t);
+      }
+    }
+
+    const t = setTimeout(next, 1000);
+    container._timers.push(t);
+  }
+
+  function stopSlider(container) {
+    const images = container.querySelectorAll("img");
+    const bars = container.querySelectorAll(".slider-progress span .fill");
+
+    images.forEach((img, i) => img.classList.toggle("active", i === 0));
+    bars.forEach(fill => fill.style.width = "0%");
+
+    if (container._timers) {
+      container._timers.forEach(t => clearTimeout(t));
+      container._timers = [];
+    }
+  }
+</script>
+
+
+
+
+<!-- Swiper JS (if you're using it elsewhere) -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 </body>
 </html>
