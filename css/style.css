@@ -922,6 +922,13 @@ align-items: center;
       font-size: 18px;
       line-height: 1.6;
       color: #ccc;
+      /* width: 450px; */
+      text-align: justify;
+    }
+     .tablet{
+      font-size: 18px;
+      line-height: 1.6;
+      color: #ccc;
       width: 450px;
       text-align: justify;
     }
