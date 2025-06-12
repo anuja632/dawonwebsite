@@ -718,9 +718,19 @@ font-size: 25px;}
     .product-info {
       flex: 1 1 300px;
       padding: 2rem;
+
+    }
+    
+    .product-card p {
+      font-size:20px;
+      margin-top: 1rem;
+      font-family: "Roboto Condensed",sans-serif;
+      /* width:400px; */
+      text-align: justify;
     }
     .product-title {
-      font-size: 1.5rem;
+      font-size:25px;
+      font-family:"Fugaz One",sans-serif;
       font-weight: 600;
     }
     .price {
@@ -746,7 +756,7 @@ font-size: 25px;}
       background: #b3001a;
     }
     .thumbs img {
-      width: 150px;
+      width: 140px;
       margin-top: 20px;
       border: 2px solid #ccc;
       border-radius: 8px;
@@ -756,10 +766,22 @@ font-size: 25px;}
     .thumbs img.active {
       border-color: #e60023;
     }
-.accordion .accordion-item {
-  margin-bottom: 20px;
-}
 
+.accordion .accordion-item {
+  border: 2px solid rgba(146, 146, 146, 1);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.accordion-button::before {
+    content: "+";
+    position: absolute;
+    right: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
     .accordion-button:not(.collapsed) {
       background-color: #f8f9fa;
       color: #000;
@@ -832,11 +854,16 @@ font-size: 25px;}
   width:250px;
   margin-left:20%;
 }
+#img-aluminum{
+height:400px;
+margin-top:10px;
+align-items: center;
+}
 
     /* Key Materials Section */
     .key-materials-section {
       background-color: #000; /* black background */
-      /* padding: 30px 0; */
+      padding: 30px 0;
     }
 
     .key-materials-title {
@@ -844,7 +871,7 @@ font-size: 25px;}
       font-size: 32px;
       margin-bottom: 40px;
       text-transform: uppercase;
-      color: #fff;
+      /* color: #fff; */
     
     }
 
@@ -901,26 +928,29 @@ font-size: 25px;}
     .owl-nav {
   display: none !important;
 }
-.card {
-  position: relative;
-}
 
-.carousel-progress {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  /* top:10px; */
-  height: 4px;
-  background-color: #eee;
-  overflow: hidden;
-  z-index: 5;
-}
-
-.carousel-progress-bar {
-  height: 100%;
-  width: 0%;
-  background-color: #d10000; /* Red */
-  transition: width 0s;
-}
-
+  .carousel-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .carousel-indicator .segment {
+    width: 200px;
+    height: 5px;
+    margin: 0 5px;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .carousel-indicator .segment.active {
+    background: #c80000;
+  }
+  #u{
+  
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-family: "Fugaz One";
+color:#000
+    }
+  
