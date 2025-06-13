@@ -46,8 +46,16 @@
     margin-right: 10px;
     cursor: pointer;
 }
-  
+.navbar-nav{
+  gap:10px;}
+  .navbar {
+    background-color: #000;
+    font-size: 20px !important;
+    font-family: "Roboto Condensed", sans-serif;
+    gap: 10px;
+}
  }
+
 
 /* 1024px and below */
 @media(min-width: 993px) and (max-width: 1200px){
@@ -762,7 +770,7 @@ h6 {
     }
     .play-icon {
     z-index: 3;
-    top: 17%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
@@ -901,6 +909,15 @@ h6 {
     border-radius: 50px;
     transition: 0.3s ease;
     font-size: 12px !important;
+}
+    .play-icon {
+    z-index: 3;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 60px;
+    height: 60px;
 }
 }
 

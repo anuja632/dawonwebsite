@@ -19,11 +19,12 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark py-3">
-  <div class="container">
+  <div class="container-fluid">
     <!-- Logo + Brand -->
     <a class="navbar-brand d-flex align-items-center" href="index.html">
       <div class="logo-wrapper">
@@ -151,7 +152,7 @@
     </div>
   </div>
   <!--easy,home,secure  -->
-<div class="container py-4">
+<div class="container-fluid py-4">
   <div class="row text-center justify-content-center align-items-center" id="al">
     
     <div class="col-md-3 d-flex align-items-center justify-content-center gap-3">
@@ -182,10 +183,11 @@
 
 <!-- Version for ≥1440px (Background image hero) -->
 <section class="hero d-none d-xxl-flex">
-  <div class="hero-content">
+  <img src="image/sppeeds.png" >
+  <!-- <div class="hero-content">
     <h1><span class="speed">SPEED</span><br><span class="ropes">ROPES</span></h1>
     <p><span class="master">MASTER</span> <span class="your-motion">YOUR MOTION.</span></p>
-  </div>
+  </div> -->
 </section>
 <!-- speed rope banner -->
 
@@ -207,7 +209,7 @@
 
       <!-- Right: Image -->
       <div class="col-md-7 text-center">
-        <img src="image/speed.png" alt="Speed Ropes" class="img-fluid">
+        <img src="image/speeds.png" alt="Speed Ropes" class="img-fluid">
       </div>
     </div>
   </div>
@@ -218,7 +220,7 @@
     <div class="row g-4">
 
       <!-- Card 1 -->
-      <div class="col-12 col-md-4">
+      <div class="col-md-4">
         <div class="card h-100 shadow-sm">
             <div class="position-relative">
 <a href="dawonproduct.html">
@@ -265,7 +267,7 @@ Ideal for cardio, coordination.
       </div>
 
       <!-- Card 2 -->
-      <div class=" col-12 col-md-4">
+      <div class="col-md-4">
         <div class="card h-100 shadow-sm">
             <div class="position-relative">
 <a href="dawonproduct.html">
@@ -312,7 +314,7 @@ Ideal for cardio, coordination.
       </div>
 
       <!-- Card 3 -->
-      <div class=" col-12 col-md-4">
+      <div class="col-md-4">
         <div class="card h-100 shadow-sm">
             <div class="position-relative">
 <a href="dawonproduct.html">
@@ -391,8 +393,16 @@ Ideal for cardio, coordination.
     </div>
   </div>
 </div>
+<!-- Version for ≥1440px (Background image hero) -->
+<section class="banner d-none d-xxl-flex">
+  <img src="image/astarbanner.png" >
+  <!-- <div class="hero-content">
+    <h1><span class="speed">SPEED</span><br><span class="ropes">ROPES</span></h1>
+    <p><span class="master">MASTER</span> <span class="your-motion">YOUR MOTION.</span></p>
+  </div> -->
+</section>
 <!-- Astar  banner-->
-  <section class="banner">
+  <section class="banner d-block d-xxl-none">
     <div class="container-fluid">
       <div class="row align-items-center">
         <div class="col-md-4 text-center text-md-start">
@@ -559,10 +569,11 @@ Perfect for refining rhythm, endurance.           </p>
 </section>
 <!-- beast rope banner -->
     <section class="heros  d-none d-xxl-flex">
-    <div class="heros-content">
+      <img src="image/beastbanner.png">
+    <!-- <div class="heros-content">
       <h1><span class="speed">  BEAST </span><br><span class="ropes">ROPES</span></h1>
       <p><span class="master">CONQUER</span> <span class="your-motion"> WITH POWER.</span></p>
-    </div>
+    </div> -->
   </section>
 <section class="beast-hero d-block d-xxl-none py-5">
   <div class="container">
@@ -588,8 +599,8 @@ Perfect for refining rhythm, endurance.           </p>
 </section>
 <!-- banner rope -->
 
-<div class="mains" style="background-color: #f4e9e2;">
-<section class="py-5" >
+<div class="mains">
+<section class="py-5" style="background-color: #f4e9e2;" >
   <div class="container">
     <div class="row g-4">
 
@@ -738,53 +749,59 @@ athletes pushing limits in strength.
 
     </div>
   </div>
-</section>
-<section class="jump-banner text-white pb-5" id="io">
+</section><!-- MOBILE VERSION: Visible under 768px -->
+<section class="jump-banner text-white pb-5 d-block d-md-none" id="io">
   <div class="container">
     <div class="row align-items-center red-box">
-      
       <!-- Text Section -->
-      <div class="col-md-6 px-5 py-4">
-        <p class="text-uppercase small fw-semibold mb-2">Why Jump Rope?</p>
+      <div class="col-12 px-4 py-4">
+        <p class="text-uppercase fw-semibold mb-2">W H Y J U M P R O P E ?</p>
         <h1 class="display-5 fw-bold" id="la">
-          <span class="fst-italic" >5 Reasons</span> It’s<br>
-          <span class="fst-italic">The Best</span><br>
-          <span class="fst-italic">Workout</span>
+          <span class="text-uppercase">5 REASON</span> IT’S<br>
+          <span class="text-uppercase">THE BEST</span><br>
+          <span class="text-uppercase">WORKOUT</span>
         </h1>
-        <a href="Benefits.html" class="btn btn-dark rounded-pill px-4 py-2 mt-3 fw-bold">Jump Rope Benefits</a>
+        <a href="Benefits.html" class="btn btn-dark rounded-pill px-4 py-2 mt-3 fw-bold" style="font-family: Poppins;">
+          JUMP ROPE BENEFITS
+        </a>
       </div>
 
       <!-- Image Section -->
-      <div class="col-md-6" id ="lo">
-        <img src="image/spot.png" alt="Jump Rope" class="jump-image">
+      <div class="col-12">
+        <img src="image/spot.png" alt="Jump Rope" class="img-fluid mt-3">
       </div>
-
     </div>
   </div>
 </section>
+
+<!-- DESKTOP VERSION: Visible 768px and above -->
+<div class="d-none d-md-block">
+  <img src="image/bgjump.png" width="100%" height="100%" alt="Jump Rope Desktop Background">
+</div>
+
+
 </div>
 <!-- video -->
 <section class="position-relative video-banner text-white text-center d-flex align-items-center justify-content-center">
-  <!-- Video Element (Autoplay, Muted, Loop) -->
+  <!-- Background Video -->
   <video id="bgVideo" class="background-video" autoplay muted loop playsinline>
-    <source src="./../image/woman.mp4" type="video/mp4">
+    <source src="image/woman.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  <!-- Overlay -->
+  <!-- Optional Overlay -->
   <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
-  <!-- Play Icon (optional if autoplay is used) -->
+  <!-- Play Icon (optional if not autoplaying) -->
   <div class="position-absolute play-icon" id="playBtn">
     <img src="image/Vector (5).png" alt="Play" />
   </div>
 
   <!-- Text Content -->
   <div class="content">
-    <h2 class="fw-bold fst-italic">REVOLUTIONIZE YOUR WORKOUT WITH THE ASTAR JUMP ROPE</h2>
-    <p class="lead mt-3">Astar Weighted Jump Ropes Starting at Just ₹3000</p>
-    <br>
-    <a href="dawonproduct.html" class="card-button rounded-pill fw-bold px-4 py-2 mt-3" id="aq">Explore More</a>
+    <h2 class="fw-bold">REVOLUTIONIZE YOUR WORKOUT WITH THE ASTAR JUMP ROPE</h2><br>
+    <p class="lead mt-3">Astar Weighted Jump Ropes Starting at Just ₹3000</p><br>
+    <a href="dawonproduct.html" class="cae rounded-pill fw-bold px-4 py-2 mt-3" id="aq" width="200px">Explore More</a>
   </div>
 </section>
 
@@ -841,7 +858,7 @@ athletes pushing limits in strength.
         </ul>
 
         <!-- Social Icons -->
-        <div class="d-flex gap-3 mt-3">
+        <div class="d-flex  social-media  mt-3">
           <a href="#" class="text-white fs-5"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="text-white fs-5"><i class="fab fa-whatsapp"></i></a>
           <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
@@ -934,21 +951,6 @@ athletes pushing limits in strength.
   }
 </script>
 
-<script>
-  document.getElementById("playBtn").addEventListener("click", function () {
-    const video = document.getElementById("bgVideo");
-    video.style.display = "block";         // Show the video
-    video.setAttribute("autoplay", true);  // Ensure autoplay
-    video.setAttribute("muted", true);     // Required for autoplay
-    video.setAttribute("loop", true);      // Loop video
-    video.play();
-
-    // Optionally hide background image, overlay, and play icon
-    document.querySelector(".overlay").style.display = "none";
-    document.getElementById("playBtn").style.display = "none";
-    document.querySelector(".video-banner").style.background = "none";
-  });
-</script>
 
 
 </body>
