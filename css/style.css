@@ -159,7 +159,7 @@ html, body {
 }
 .owl-carousel .item {
   position: relative;
-  height: 86vh;
+  height: 90vh;
   width: 100vw !important;
   display: flex;
   align-items: center;
