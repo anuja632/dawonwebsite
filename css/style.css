@@ -779,8 +779,9 @@ font-size: 20px;
     }
     .product-title {
       font-size:25px;
-      font-family:"Roboto";
+      font-family:"Roboto Condensed";
       font-weight: 600;
+  font-weight: bold;
     }
     .price {
       font-size: 1.4rem;
@@ -935,23 +936,37 @@ align-items: center;
       width: 450px;
       text-align: justify;
     }
-
-  .carousel-indicator {
-    display: flex;
-    justify-content: center;
+  .scrollbar-container {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    position: relative;
     margin-top: 10px;
-  }
-  .carousel-indicator .segment {
-    width: 200px;
-    height: 5px;
-    margin: 0 5px;
-    background: #ccc;
     cursor: pointer;
-    transition: background 0.3s ease;
   }
-  .carousel-indicator .segment.active {
-    background: #c80000;
+
+  .scrollbar-handle {
+    height: 8px;
+    width: 60px;
+    background: #c80000;;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    transition: background 0.2s;
   }
+
+  .scrollbar-handle:hover {
+    background:#c80000;
+  }
+
+  /* .owl-carousel .card {
+    background: #f5f5f5;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 10px;
+  } */
   #u{
   
       font-weight: bold;

@@ -28,6 +28,7 @@
     .key-materials-section {
       background-color: #000; /* black background */
       padding: 30px 0;
+      font-family: "Poppins";
     }
 
     .key-materials-title {
@@ -508,6 +509,7 @@
     <div class="owl-carousel-wrapper position-relative">
       <div class="owl-carousel owl-theme">
       
+        
         <!-- Card 1 -->
     <div class="card h-100 shadow-sm">
               <div class="position-relative">
@@ -670,7 +672,7 @@
                 </div>
               </div>
             </div>
-              <!-- Card 5-->
+               <!-- Card 5-->
             <div class="card h-100 shadow-sm">
           <div class="position-relative">
             <div class="image-slider-wrapper card-img-top" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
@@ -870,26 +872,19 @@
                 </div>
               </div>
             </div>
-      </div>
-      <div class="carousel-indicator">
-      <div class="segment" data-index="0"></div>
-      <div class="segment" data-index="1"></div>
-      <div class="segment" data-index="2"></div>
-      <div class="segment" data-index="3"></div>
-      <div class="segment" data-index="4"></div>
-        <div class="segment" data-index="5"></div>
-      <div class="segment" data-index="6"></div>
-      <div class="segment" data-index="7"></div>
-      <div class="segment" data-index="8"></div>
 
-    </div>
+      </div>
+      <!-- Custom Scrollbar -->
+  <div class="scrollbar-container mt-4">
+    <div class="scrollbar-handle"></div>
+  </div>
 
     </div>
     </div>
 </div>
 
 
-
+           
 
 <!-- footer -->
 <footer class="footer bg-dark text-white pt-5">
@@ -990,60 +985,104 @@
 
   
 </script>
-
-
-
-<!-- ✅ Owl Carousel Initialization (Place AFTER jQuery + Owl Carousel) -->
 <script>
   $(document).ready(function () {
     const $carousel = $(".owl-carousel");
-    const $cards = $(".owl-carousel .card");
-    const cardCount = $cards.length;
+    const $handle = $(".scrollbar-handle");
+    const $scrollbar = $(".scrollbar-container");
 
-    // Initialize Owl Carousel (no autoplay)
+    let itemsToShow = 1;
+    let totalCards = $(".owl-carousel .card").length;
+    let maxIndex, maxTranslate;
+
+    function recalculate() {
+      itemsToShow = 1; // 👈 force 1 visible always
+      totalCards = $(".owl-carousel .card").length;
+      maxIndex = Math.max(totalCards - itemsToShow, 0);
+      maxTranslate = Math.max($scrollbar.width() - $handle.width(), 1);
+    }
+
+    function updateScrollbar(index) {
+      if (maxIndex <= 0) return;
+      const translateX = (index / maxIndex) * maxTranslate;
+      $handle.css("transform", `translateX(${translateX}px)`);
+    }
+
     $carousel.owlCarousel({
-      items: 3,
+      startPosition: 0,
+      items: itemsToShow,
       loop: true,
-      margin: 15,
-      slideBy: 1,
-      dots:false,
-      autoplay: false, // ❌ disable autoplay
+      margin: 10,
+      dots: false,
+      nav: false,
       smartSpeed: 500,
       responsive: {
         0: { items: 1 },
-        768: { items: 2 },
+        768: { items: 1 },
         992: { items: 3 }
+      },
+      onInitialized: function () {
+        recalculate();
+        updateScrollbar(0);
       }
     });
 
-    // Dynamically create indicator segments
-    const $indicator = $(".carousel-indicator").empty();
-    for (let i = 0; i < cardCount; i++) {
-      $indicator.append(`<div class="segment" data-index="${i}"></div>`);
-    }
-    const $segments = $(".carousel-indicator .segment");
-
-    function setActiveSegment(index) {
-      $segments.removeClass("active");
-      $segments.eq(index % cardCount).addClass("active");
-    }
-
-    // Update segment on carousel change
     $carousel.on("changed.owl.carousel", function (event) {
-      const index = event.item.index % cardCount;
-      setActiveSegment(index);
+      const index = event.item.index;
+      updateScrollbar(index);
     });
 
-    // Click segment to move to slide
-    $segments.on("click", function () {
-      const index = $(this).data("index");
-      $carousel.trigger("to.owl.carousel", [index, 500]);
-      setActiveSegment(index);
+    $scrollbar.on("click", function (e) {
+      if ($(e.target).hasClass("scrollbar-handle")) return;
+      recalculate();
+      if (maxIndex <= 0) return;
+
+      const offsetX = e.pageX - $scrollbar.offset().left;
+      const ratio = offsetX / $scrollbar.width();
+      let targetIndex = Math.round(ratio * maxIndex);
+      targetIndex = Math.max(0, Math.min(targetIndex, maxIndex));
+
+      $carousel.trigger("to.owl.carousel", [targetIndex, 500]);
+      updateScrollbar(targetIndex);
     });
 
-    setActiveSegment(0); // Set initial segment
+    let isDragging = false;
+    let startX = 0, scrollStart = 0;
+
+    $handle.on("mousedown", function (e) {
+      isDragging = true;
+      startX = e.pageX;
+      scrollStart = $handle.position().left;
+      e.preventDefault();
+    });
+
+    $(document).on("mousemove", function (e) {
+      if (!isDragging) return;
+
+      const delta = e.pageX - startX;
+      let newLeft = scrollStart + delta;
+
+      newLeft = Math.max(0, Math.min(newLeft, maxTranslate));
+      $handle.css("transform", `translateX(${newLeft}px)`);
+
+      const ratio = newLeft / maxTranslate;
+      const targetIndex = Math.round(ratio * maxIndex);
+      $carousel.trigger("to.owl.carousel", [targetIndex, 0]);
+    });
+
+    $(document).on("mouseup", function () {
+      isDragging = false;
+    });
+
+    $(window).on("resize", function () {
+      recalculate();
+      const currentIndex = $carousel.find('.owl-item.active').first().index();
+      updateScrollbar(currentIndex);
+    });
   });
 </script>
+
+
 
 
 
