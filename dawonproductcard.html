@@ -18,15 +18,132 @@
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-</head>
+
 <style>
       .owl-nav {
   display: none !important;
 }
 
+    /* Key Materials Section */
+    .key-materials-section {
+      background-color: #000; /* black background */
+      padding: 30px 0;
+    }
+
+    .key-materials-title {
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      /* color: #fff; */
+    
+    }
+
+
+    /* Material Content */
+    .material-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+    }
+
+/* Tabs */
+.nav-tabs .nav-link {
+  position: relative; /* 👈 THIS is needed for the ::after underline */
+  color: #888;
+  font-weight: 600;
+  border: none !important;
+  background: none !important;
+  margin: 0 10px;
+  padding: 8px 16px;
+  text-transform: uppercase;
+}
+
+.nav-tabs {
+  --bs-nav-tabs-border-width: 0; /* Remove bottom border line if not needed */
+  border-bottom: none !important;
+}
+
+/* Underline for active tab */
+.nav-tabs .nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* Remove background from active */
+.nav-tabs .nav-link.active {
+  background: none !important;
+  color: #888;
+  
+}
+
+/* Optional: Hover effect */
+.nav-tabs .nav-link:hover {
+  color: #ccc;
+}
+.accordion-body table {
+  font-family: "Roboto", sans-serif;
+  color: #555555;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+}
+#uy th,
+#uy td {
+  font-weight: 400; /* no bold */
+  padding: 10px 12px;
+  vertical-align: top;
+  color: #555555 !important;
+  font-family: "Roboto", sans-serif;
+}
+.custom-rope-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  background-color: #fff0f0;
+}
+
+/* Header Row */
+.custom-rope-table th {
+  background-color: #c80000;
+  color: #fff;
+  padding: 15px;
+  font-weight: 600;
+}
+
+/* Red S.No Column */
+.custom-rope-table th:first-child,
+.custom-rope-table td:first-child {
+  background-color: #c80000;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Table Data Cells */
+.custom-rope-table td {
+  padding: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Even Row Backgrounds */
+.custom-rope-table tbody tr:nth-child(even) {
+  background-color: #ffdede;
+}
+
+
 </style>
+</head>
 <body>
-<!-- Navbar -->
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark py-3">
   <div class="container-fluid">
@@ -181,25 +298,26 @@
         PRODUCT SPEC
       </button>
     </h2>
-    <div id="collapseSpec" class="accordion-collapse collapse " data-bs-parent="#productAccordion">
+    <div id="collapseSpec" class="accordion-collapse collapse " data-bs-parent="#productAccordion" style="color:#555555 !important">
       <div class="accordion-body">
         <div class="table-responsive">
-          <table class="table table-bordered align-middle mb-0">
-            <tbody>
-              <tr><th>Brand</th><td>Dawon Athletics</td></tr>
-              <tr><th>Target Audience</th><td>Adults & Youth</td></tr>
-              <tr><th>Handle Diameter</th><td>22mm</td></tr>
-              <tr><th>Handle Features</th><td>Foam grip, high-speed ball bearings, Hook Lock system</td></tr>
-              <tr><th>Rope Type</th><td>High-tensile PVC-coated steel wire ropes</td></tr>
-              <tr><th>Weight Options (Ropes)</th><td>• 60g – Light<br>• 90g – Medium<br>• 120g – Heavy</td></tr>
-              <tr><th>Rope Sizes</th><td>• Small – 2.45m<br>• Medium – 2.60m<br>• Large – 2.75m</td></tr>
-              <tr><th>Total Set Includes</th><td>• 1 pair of handles<br>• 3 interchangeable weighted ropes<br>• Hook Lock system</td></tr>
-              <tr><th>Recommended For</th><td>Speed skipping, cardio, HIIT, freestyle tricks</td></tr>
-              <tr><th>Special Features</th><td>Adjustable, Lightweight, Smooth Rotation</td></tr>
-              <tr><th>Use Case</th><td>Gym workouts, athletic training</td></tr>
-              <tr><th>Made In</th><td>Bharat (India)</td></tr>
-            </tbody>
-          </table>
+<table class="table align-middle mb-0" style="border: none; border-collapse: collapse;">
+  <tbody id="uy">
+    <tr><th>Brand</th><td>Dawon Athletics</td></tr>
+    <tr><th>Target Audience</th><td>Adults & Youth</td></tr>
+    <tr><th>Handle Diameter</th><td>22mm</td></tr>
+    <tr><th>Handle Features</th><td>Foam grip, high-speed ball bearings, Hook Lock system</td></tr>
+    <tr><th>Rope Type</th><td>High-tensile PVC-coated steel wire ropes</td></tr>
+    <tr><th>Weight Options (Ropes)</th><td>• 60g – Light<br>• 90g – Medium<br>• 120g – Heavy</td></tr>
+    <tr><th>Rope Sizes</th><td>• Small – 2.45m<br>• Medium – 2.60m<br>• Large – 2.75m</td></tr>
+    <tr><th>Total Set Includes</th><td>• 1 pair of handles<br>• 3 interchangeable weighted ropes<br>• Hook Lock system</td></tr>
+    <tr><th>Recommended For</th><td>Speed skipping, cardio, HIIT, freestyle tricks</td></tr>
+    <tr><th>Special Features</th><td>Adjustable, Lightweight, Smooth Rotation</td></tr>
+    <tr><th>Use Case</th><td>Gym workouts, athletic training</td></tr>
+    <tr><th>Made In</th><td>Bharat (India)</td></tr>
+  </tbody>
+</table>
+
         </div>
       </div>
     </div>
@@ -215,53 +333,57 @@
     </h2>
     <div id="collapseFeatures" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
       <div class="accordion-body">
-        <p><strong>High-Speed, Interchangeable Jump Ropes for Advanced Cardio & Fitness Training</strong></p>
-        <ul class="ps-3">
-          <li><strong>Engineered for Speed & Performance:</strong> Combines speed, agility, and versatility in one system.</li>
-          <li><strong>Interchangeable Weighted Ropes:</strong> 60g, 90g, 120g ropes to match your training intensity.</li>
-          <li><strong>Hook Lock System – 2-Piece Construction:</strong> Secure, quick-swap system avoids bulky setups.</li>
-          <li><strong>High-Speed Bearings:</strong> Provides ultra-smooth spin for speed training.</li>
-          <li><strong>Durable & Lightweight:</strong> Foam-covered 22mm ergonomic handles.</li>
-          <li><strong>Comfort Meets Control:</strong> Sweat-resistant grips offer long-session comfort.</li>
-        </ul>
+        <p style="color: #555555 !important; font-family: 'Roboto', sans-serif;"><strong>High-Speed, Interchangeable Jump Ropes for Advanced Cardio & Fitness Training</strong></p>
+<ul class="ps-3" style="color: #555555 !important; font-family: 'Roboto', sans-serif;">
+  <li><strong>Engineered for Speed & Agility:</strong> Designed for high-intensity workouts like double-unders and footwork drills, these ropes deliver speed, versatility, and top-tier performance.</li>
+  <li><strong>Progressive Weighted Ropes (60g | 90g | 120g):</strong> Includes three PVC-coated steel cables for adjustable resistance. Easily switch based on training goals using the secure Hook Lock System.</li>
+  <li><strong>Compact Hook Lock System:</strong> Innovative 2-piece locking design combines bearing shaft and rope lock, eliminating bulky parts and allowing fast rope swaps mid-workout.</li>
+  <li><strong>Precision Bearings for Speed:</strong> High-speed ball bearings provide smooth, consistent rotation—ideal for freestyle, cardio, and competitive skipping.</li>
+  <li><strong>Built to Last:</strong> Constructed from durable materials including steel wire, nylon, and 22mm foam-covered ergonomic handles to withstand tough training conditions.</li>
+  <li><strong>Enhanced Grip & Comfort:</strong> Sweat-resistant foam grips reduce fatigue and improve control during longer jump rope sessions.</li>
+</ul>
 
-        <!-- Rope Weight Table -->
-        <div class="table-responsive mb-4">
-          <table class="table table-bordered text-center" style="border: 2px solid red;">
-            <thead style="background-color: #f8d7da;">
-              <tr>
-                <th>S.No</th>
-                <th>Ropes</th>
-                <th>Grams</th>
-                <th>Pounds</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>1</td><td>White</td><td>140 Grms</td><td>0.30 pounds</td></tr>
-              <tr><td>2</td><td>Green</td><td>85 Grms</td><td>0.15 pounds</td></tr>
-              <tr><td>3</td><td>Violet</td><td>120 Grms</td><td>0.20 pounds</td></tr>
-            </tbody>
-          </table>
-        </div>
 
-        <!-- Rope Size Table -->
-        <div class="table-responsive">
-          <table class="table table-bordered text-center" style="border: 2px solid red;">
-            <thead style="background-color: #f8d7da;">
-              <tr>
-                <th>S.No</th>
-                <th>Body Height</th>
-                <th>Rope Size</th>
-                <th>Rope Length</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>1</td><td>1.45-1.68 Mts</td><td>Small</td><td>2.45 Mts</td></tr>
-              <tr><td>2</td><td>1.69-1.85 Mts</td><td>Medium</td><td>2.60 Mts</td></tr>
-              <tr><td>3</td><td>1.84-2.10 Mts</td><td>Large</td><td>2.75 Mts</td></tr>
-            </tbody>
-          </table>
-        </div>
+<!-- Rope Weight Table -->
+<div class="custom-table-container mb-4">
+  <table class="custom-rope-table">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Ropes</th>
+        <th>Grams</th>
+        <th>Pounds</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>white</td><td>140 Gms</td><td>0.30 pounds</td></tr>
+      <tr><td>2</td><td>green</td><td>85 Gms</td><td>0.15 pounds</td></tr>
+      <tr><td>3</td><td>violet</td><td>120 Gms</td><td>0.20 pounds</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Rope Size Table -->
+<div class="custom-table-container">
+  <table class="custom-rope-table">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Body Height</th>
+        <th>Rope Size</th>
+        <th>Rope Length</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>1.45-1.68 Mts</td><td>Small</td><td>2.45 Mts</td></tr>
+      <tr><td>2</td><td>1.69-1.83 Mts</td><td>Medium</td><td>2.60 Mts</td></tr>
+      <tr><td>3</td><td>1.84-2.10 Mts</td><td>Large</td><td>2.75 Mts</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+
       </div>
     </div>
   </div>
@@ -269,16 +391,17 @@
     </div>
   </div>
 </div>
+
 <div class="container">
   <h2 class="key-materials-title text-center">KEY MATERIALS</h2>
   <section class="key-materials-section">
 <div class="row align-items-center">
       <!-- Left Images -->
-      <div class="col-md-5 mb-4 mb-md-0 position-relative">
+      <div class="col-md-5 mb-4 mb-md-0 position-relative" style="border: none;">
         <img id="img-steel" src="image/strain.png" alt="Stainless Steel" class="material-image">
-        <img id="img-aluminum" src="image/Aliminum.jpg" alt="Aluminium" class="material-image d-none">
-        <img id="img-spring" src="image/spring1.png" alt="Spring Steel" class="material-image d-none">
-        <img id="img-carbon" src="image/carbon.png" alt="High Carbon Steel" class="material-image d-none">
+        <img id="img-aluminum" src="image/Aliminum.png" alt="Aluminium" class="material-image d-none">
+        <img id="img-spring" src="image/spring.png" alt="Spring Steel" class="material-image d-none">
+        <img id="img-carbon" src="image/sla.png" alt="High Carbon Steel" class="material-image d-none">
       </div>
 
       <!-- Right Tabs + Content -->
@@ -378,393 +501,391 @@
 </section>
 
 <div class="mains" style="background-color:  #f4e9e2;">
+    <div class="container py-5">
+      <h2 class="mb-4 fw-bold" id="u">You May Also Like</h2>
+      <hr style="border: none; border-top: 2px solid #000 !important; color:#000; opacity: 1;">
 
+    <div class="owl-carousel-wrapper position-relative">
+      <div class="owl-carousel owl-theme">
+      
+        <!-- Card 1 -->
+    <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                          <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+        <!-- Progress bar -->
 
-<div class="container py-5">
-  <h2 class="mb-4 fw-bold" id="u">You May Also Like</h2>
-  <hr style="border: none; border-top: 2px solid #000 !important; color:#000; opacity: 1;">
+    <div class="slider-progress">
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+    </div>
 
-<div class="owl-carousel-wrapper position-relative">
-  <div class="owl-carousel owl-theme">
-   
-    <!-- Card 1 -->
- <div class="card h-100 shadow-sm">
-          <div class="position-relative">
-                       <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
-    <!-- Progress bar -->
-
-<div class="slider-progress">
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-</div>
-
-    <!-- Multiple images -->
-    <img src="image/dawon1.9 (8).png" class="active" alt="img 1" />
-    <img src="image/beast1.png" alt="img 2" />
-    <img src="image/beast2.png" alt="img 3" />
-    <img src="image/beast3.png" alt="img 4" />
-    <!-- Discount badge -->
-    <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 10%</span>
-  </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dawon Athletics - Beast Ropes</h5>
-            <p class="mb-1 text-dark fw-bold"id ="ad">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-<span class="text-dark">550+ Reviews</span>
-            </p>
-            <p class="card-text text-dark">
- Heavy ropes built for serious power. Perfect 
-for adults training strength, stamina.
-            </p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <div>
-                <span class="fw-bold fs-5" id="op">₹ 4,000</span>
-                <span class="text-decoration-line-through text-muted" id="op">₹ 8,000</span>
+        <!-- Multiple images -->
+        <img src="image/dawon1.9 (8).png" class="active" alt="img 1" />
+        <img src="image/beast1.png" alt="img 2" />
+        <img src="image/beast2.png" alt="img 3" />
+        <img src="image/beast3.png" alt="img 4" />
+        <!-- Discount badge -->
+        <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 10%</span>
+      </div>
               </div>
-              <a href="#" class="card-button">SHOP NOW</a>
+              <div class="card-body">
+                <h5 class="card-title">Dawon Athletics - Beast Ropes</h5>
+                <p class="mb-1 text-dark fw-bold"id ="ad">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    <span class="text-dark">550+ Reviews</span>
+                </p>
+                <p class="card-text text-dark">
+    Heavy ropes built for serious power. Perfect 
+    for adults training strength, stamina.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div>
+                    <span class="fw-bold fs-5" id="op">₹ 4,000</span>
+                    <span class="text-decoration-line-through text-muted" id="op">₹ 8,000</span>
+                  </div>
+                  <a href="#" class="card-button">SHOP NOW</a>
+                </div>
+              </div>
+            </div>
+          <!-- Card 2 -->
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+        <!-- Progress bar -->
+
+    <div class="slider-progress">
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+    </div>
+
+        <!-- Multiple images -->
+        <img src="image/dawon1.9 (5).png" class="active" alt="img 1" />
+        <img src="image/red1.png" alt="img 2" />
+        <img src="image/red2.png" alt="img 3" />
+        <img src="image/red3.png" alt="img 4" />
+        <!-- Discount badge -->
+        <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 10%</span>
+      </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"> Dawon Athletics - Astar Ropes
+    </h5>
+                <p class="mb-1 text-dark fw-bold" id ="ad">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    <span class="text-dark">450+ Reviews</span>
+                </p>
+                <p class="card-text text-dark ">
+    Balanced speed with responsive feedback. 
+    Perfect for refining rhythm, endurance..           </p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div>
+                    <span class="fw-bold fs-5" id="op">₹ 3,000</span>
+                    <span class="text-decoration-line-through text-muted" id="op">₹ 9,999</span>
+                  </div>
+                  <a href="#" class="card-button">SHOP NOW</a>
+                </div>
+              </div>
+            </div>
+              <!-- Card 3-->
+            <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                          <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+        <!-- Progress bar -->
+
+    <!-- <div class="slider-progress">
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+    </div> -->
+
+        <!-- Multiple images -->
+        <img src="image/classic1.png" class="active" alt="img 1" />
+        <!-- <img src="image/beast1.png" alt="img 2" />
+        <img src="image/beast2.png" alt="img 3" />
+        <img src="image/beast3.png" alt="img 4" /> -->
+        <!-- Discount badge -->
+        <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 10%</span>
+      </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Dawon Athletics -Classic  Ropes</h5>
+                <p class="mb-1 text-dark fw-bold"id ="ad">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    <span class="text-dark">150+ Reviews</span>
+                </p>
+                <p class="card-text text-dark">
+    Enduring weight meets perfect balance. Designed for stamina, made for mastery.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div>
+                    <span class="fw-bold fs-5" id="op">₹ 3,000</span>
+                    <span class="text-decoration-line-through text-muted" id="op">₹ 7,000</span>
+                  </div>
+                  <a href="#" class="card-button">SHOP NOW</a>
+                </div>
+              </div>
+            </div>
+          <!-- Card 4 -->
+              <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                          <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+        <!-- Progress bar -->
+    <!-- 
+    <div class="slider-progress">
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+    </div> -->
+
+        <!-- Multiple images -->
+        <img src="image/ropea1.png" class="active" alt="img 1" />
+        <!-- <img src="image/beast1.png" alt="img 2" />
+        <img src="image/beast2.png" alt="img 3" />
+        <img src="image/beast3.png" alt="img 4" /> -->
+        <!-- Discount badge -->
+        <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 10%</span>
+      </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Dawon Athletics -Ropes</h5>
+                <p class="mb-1 text-dark fw-bold"id ="ad">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    <span class="text-dark">250+ Reviews</span>
+                </p>
+                <p class="card-text text-dark">
+    Smooth grip meets subtle resistance. Designed for developing strength.........
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div>
+                    <span class="fw-bold fs-5" id="op">₹ 1,200</span>
+                    <span class="text-decoration-line-through text-muted" id="op">₹ 6,000</span>
+                  </div>
+                  <a href="#" class="card-button">SHOP NOW</a>
+                </div>
+              </div>
+            </div>
+              <!-- Card 5-->
+            <div class="card h-100 shadow-sm">
+          <div class="position-relative">
+            <div class="image-slider-wrapper card-img-top" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+              <div class="slider-progress">
+                <span><div class="fill"></div></span>
+                <span><div class="fill"></div></span>
+                <span><div class="fill"></div></span>
+                <span><div class="fill"></div></span>
+              </div>
+              <img src="image/dawon1.9.png" class="active" alt="img 1" />
+              <img src="image/speed6.png" alt="img 2" />
+              <img src="image/speed11.png" alt="img 3" />
+              <img src="image/speed3.png" alt="img 4" />
+              <span class="badge bg-dark position-absolute top-0 end-0 m-3">SAVE 10%</span>
             </div>
           </div>
-        </div>
-      <!-- Card 2 -->
-        <div class="card h-100 shadow-sm">
-          <div class="position-relative">
-            <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
-    <!-- Progress bar -->
-
-<div class="slider-progress">
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-</div>
-
-    <!-- Multiple images -->
-    <img src="image/dawon1.9 (5).png" class="active" alt="img 1" />
-    <img src="image/red1.png" alt="img 2" />
-    <img src="image/red2.png" alt="img 3" />
-    <img src="image/red3.png" alt="img 4" />
-    <!-- Discount badge -->
-    <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 10%</span>
-  </div>
-          </div>
           <div class="card-body">
-            <h5 class="card-title"> Dawon Athletics - Astar Ropes
-</h5>
-            <p class="mb-1 text-dark fw-bold" id ="ad">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
- <span class="text-dark">450+ Reviews</span>
+            <h5 class="card-title">Dawon Athletics - Speed Ropes</h5>
+            <p class="mb-1 text-dark fw-bold">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <span class="text-dark">500+ Reviews</span>
             </p>
-            <p class="card-text text-dark ">
- Balanced speed with responsive feedback. 
-Perfect for refining rhythm, endurance..           </p>
+            <p class="card-text text-dark">Built for quick spins and smooth transitions. Ideal for cardio, coordination.</p>
             <div class="d-flex justify-content-between align-items-center mt-3">
               <div>
-                <span class="fw-bold fs-5" id="op">₹ 3,000</span>
-                <span class="text-decoration-line-through text-muted" id="op">₹ 9,999</span>
+                <span class="fw-bold fs-5">₹ 2,000</span>
+                <span class="text-decoration-line-through text-muted">₹ 8,000</span>
               </div>
-              <a href="#" class="card-button">SHOP NOW</a>
+              <a href="dawonproductcard.html" class="card-button">SHOP NOW</a>
             </div>
           </div>
-        </div>
-          <!-- Card 3-->
-        <div class="card h-100 shadow-sm">
-          <div class="position-relative">
-                       <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
-    <!-- Progress bar -->
-
-<!-- <div class="slider-progress">
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-</div> -->
-
-    <!-- Multiple images -->
-    <img src="image/classic1.png" class="active" alt="img 1" />
-    <!-- <img src="image/beast1.png" alt="img 2" />
-    <img src="image/beast2.png" alt="img 3" />
-    <img src="image/beast3.png" alt="img 4" /> -->
-    <!-- Discount badge -->
-    <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 10%</span>
-  </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dawon Athletics -Classic  Ropes</h5>
-            <p class="mb-1 text-dark fw-bold"id ="ad">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-<span class="text-dark">150+ Reviews</span>
-            </p>
-            <p class="card-text text-dark">
-Enduring weight meets perfect balance. Designed for stamina, made for mastery.
-            </p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <div>
-                <span class="fw-bold fs-5" id="op">₹ 3,000</span>
-                <span class="text-decoration-line-through text-muted" id="op">₹ 7,000</span>
-              </div>
-              <a href="#" class="card-button">SHOP NOW</a>
             </div>
-          </div>
-        </div>
-      <!-- Card 4 -->
-          <div class="card h-100 shadow-sm">
-          <div class="position-relative">
-                       <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
-    <!-- Progress bar -->
-<!-- 
-<div class="slider-progress">
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-</div> -->
+            <!-- card6 -->
 
-    <!-- Multiple images -->
-    <img src="image/ropea1.png" class="active" alt="img 1" />
-    <!-- <img src="image/beast1.png" alt="img 2" />
-    <img src="image/beast2.png" alt="img 3" />
-    <img src="image/beast3.png" alt="img 4" /> -->
-    <!-- Discount badge -->
-    <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 10%</span>
-  </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dawon Athletics -Ropes</h5>
-            <p class="mb-1 text-dark fw-bold"id ="ad">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-<span class="text-dark">250+ Reviews</span>
-            </p>
-            <p class="card-text text-dark">
-Smooth grip meets subtle resistance. Designed for developing strength.........
-            </p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <div>
-                <span class="fw-bold fs-5" id="op">₹ 1,200</span>
-                <span class="text-decoration-line-through text-muted" id="op">₹ 6,000</span>
+    <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+        <!-- Progress bar -->
+
+    <div class="slider-progress">
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+    </div>
+
+        <!-- Multiple images -->
+        <img src="image/dawon1.9 (7).png" class="active" alt="img 1" />
+        <img src="image/beast4.png" alt="img 2" />
+        <img src="image/beast5.png" alt="img 3" />
+        <img src="image/beast1.png" alt="img 4" />
+        <!-- Discount badge -->
+        <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 20%</span>
+      </div>
               </div>
-              <a href="#" class="card-button">SHOP NOW</a>
+              <div class="card-body">
+                <h5 class="card-title">Dawon Athletics - Beast Ropes</h5>
+                <p class="mb-1 text-dark fw-bold"id ="ad">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    <span class="text-dark">600+ Reviews</span>
+                </p>
+                <p class="card-text text-dark ">
+                High-resistance design for max output. Ideal 
+    for explosive workouts and upper-body.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div>
+                    <span class="fw-bold fs-5" id="op">₹ 4,000</span>
+                    <span class="text-decoration-line-through text-muted" id="op">₹ 8,000</span>
+                  </div>
+                  <a href="#" class="card-button">SHOP NOW</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-          <!-- Card 5-->
-        <div class="card h-100 shadow-sm">
-      <div class="position-relative">
-        <div class="image-slider-wrapper card-img-top" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+
+
+            <!-- card7 -->
+                    <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+        <!-- Progress bar -->
+
+    <div class="slider-progress">
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+    </div>
+
+        <!-- Multiple images -->
+        <img src="image/dawon1.9 (4).png" class="active" alt="img 1" />
+        <img src="image/red1.png" alt="img 2" />
+        <img src="image/dawon1.9 (5).png" alt="img 3" />
+        <img src="image/dawon1.9 (3).png" alt="img 4" />
+        <!-- Discount badge -->
+        <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 20%</span>
+      </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"> Dawon Athletics - Astar Ropes</h5>
+                <p class="mb-1 text-dark fw-bold" id ="ad">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    <span class="text-dark">600+ Reviews</span>
+                </p>
+                <p class="card-text text-dark">
+    Lightweight feel, lasting impact. Suited for 
+    active teens and adults building..            </p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div>
+                    <span class="fw-bold fs-5" id="op">₹ 3,000</span>
+                    <span class="text-decoration-line-through text-muted" id="op">₹ 9,999</span>
+                  </div>
+                  <a href="#" class="card-button">SHOP NOW</a>
+                </div>
+              </div>
+            </div>
+            <!-- card8 -->
+    <div class="card h-100 shadow-sm">
+              <div class="position-relative">
+                <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+        <!-- Progress bar -->
+
+    <!-- <div class="slider-progress">
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+      <span><div class="fill"></div></span>
+    </div> -->
+
+        <!-- Multiple images -->
+        <img src="image/classic2.png" class="active" alt="img 1" />
+        <!-- <img src="image/beast4.png" alt="img 2" />
+        <img src="image/beast5.png" alt="img 3" />
+        <img src="image/beast1.png" alt="img 4" /> -->
+        <!-- Discount badge -->
+        <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 20%</span>
+      </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Dawon Athletics - Classic Ropes</h5>
+                <p class="mb-1 text-dark fw-bold"id ="ad">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    <span class="text-dark">100+ Reviews</span>
+                </p>
+                <p class="card-text text-dark ">
+    Natural resistance meets pure control. Train harder, move better.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div>
+                    <span class="fw-bold fs-5" id="op">₹ 3,000</span>
+                    <span class="text-decoration-line-through text-muted" id="op">₹ 7,000</span>
+                  </div>
+                  <a href="#" class="card-button">SHOP NOW</a>
+                </div>
+              </div>
+            </div>
+            <!-- card 9 -->
+                      <div class="card h-100 shadow-sm">
+                <div class="position-relative">
+
+            <div class="image-slider-wrapper card-img-top "  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
+              <!-- Progress bar -->
+
           <div class="slider-progress">
             <span><div class="fill"></div></span>
             <span><div class="fill"></div></span>
             <span><div class="fill"></div></span>
             <span><div class="fill"></div></span>
           </div>
-          <img src="image/dawon1.9.png" class="active" alt="img 1" />
-          <img src="image/speed6.png" alt="img 2" />
-          <img src="image/speed11.png" alt="img 3" />
-          <img src="image/speed3.png" alt="img 4" />
-          <span class="badge bg-dark position-absolute top-0 end-0 m-3">SAVE 10%</span>
-        </div>
+
+              <!-- Multiple images -->
+              <img src="image/dawon1.9 (2).png" class="active " alt="img 1" />
+              <img src="image/speed7.png" alt="img 2" />
+              <img src="image/speed8.png" alt="img 3" />
+              <img src="image/speed9.png" alt="img 4" />
+              <!-- Discount badge -->
+              <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 20%</span>
+            </div>
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title">Dawon Athletics - Speed Ropes</h5>
+                <p class="mb-1 text-dark fw-bold" id ="ad">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+    <span class="text-dark">800+ Reviews</span>
+                </p>
+                <p class="card-text text-dark ">
+                  All the speed and agility benefits in a  the lightweight set. Perfect for beginners.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <div>
+                    <span class="fw-bold fs-5" id="op">₹ 2,000</span>
+                    <span class="text-decoration-line-through text-muted" id="op">₹ 8,000</span>
+                  </div>
+                  <a href="#" class="card-button">SHOP NOW</a>
+                </div>
+              </div>
+            </div>
       </div>
-      <div class="card-body">
-        <h5 class="card-title">Dawon Athletics - Speed Ropes</h5>
-        <p class="mb-1 text-dark fw-bold">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span class="text-dark">500+ Reviews</span>
-        </p>
-        <p class="card-text text-dark">Built for quick spins and smooth transitions. Ideal for cardio, coordination.</p>
-        <div class="d-flex justify-content-between align-items-center mt-3">
-          <div>
-            <span class="fw-bold fs-5">₹ 2,000</span>
-            <span class="text-decoration-line-through text-muted">₹ 8,000</span>
-          </div>
-          <a href="dawonproductcard.html" class="card-button">SHOP NOW</a>
-        </div>
-      </div>
-        </div>
-        <!-- card6 -->
+      <div class="carousel-indicator">
+      <div class="segment" data-index="0"></div>
+      <div class="segment" data-index="1"></div>
+      <div class="segment" data-index="2"></div>
+      <div class="segment" data-index="3"></div>
+      <div class="segment" data-index="4"></div>
+        <div class="segment" data-index="5"></div>
+      <div class="segment" data-index="6"></div>
+      <div class="segment" data-index="7"></div>
+      <div class="segment" data-index="8"></div>
 
- <div class="card h-100 shadow-sm">
-          <div class="position-relative">
-             <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
-    <!-- Progress bar -->
+    </div>
 
-<div class="slider-progress">
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-</div>
-
-    <!-- Multiple images -->
-    <img src="image/dawon1.9 (7).png" class="active" alt="img 1" />
-    <img src="image/beast4.png" alt="img 2" />
-    <img src="image/beast5.png" alt="img 3" />
-    <img src="image/beast1.png" alt="img 4" />
-    <!-- Discount badge -->
-    <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 20%</span>
-  </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dawon Athletics - Beast Ropes</h5>
-            <p class="mb-1 text-dark fw-bold"id ="ad">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
- <span class="text-dark">600+ Reviews</span>
-            </p>
-            <p class="card-text text-dark ">
-            High-resistance design for max output. Ideal 
-for explosive workouts and upper-body.
-            </p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <div>
-                <span class="fw-bold fs-5" id="op">₹ 4,000</span>
-                <span class="text-decoration-line-through text-muted" id="op">₹ 8,000</span>
-              </div>
-              <a href="#" class="card-button">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- card7 -->
-                 <div class="card h-100 shadow-sm">
-          <div class="position-relative">
-             <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
-    <!-- Progress bar -->
-
-<div class="slider-progress">
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-</div>
-
-    <!-- Multiple images -->
-    <img src="image/dawon1.9 (4).png" class="active" alt="img 1" />
-    <img src="image/red1.png" alt="img 2" />
-    <img src="image/dawon1.9 (5).png" alt="img 3" />
-    <img src="image/dawon1.9 (3).png" alt="img 4" />
-    <!-- Discount badge -->
-    <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 20%</span>
-  </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"> Dawon Athletics - Astar Ropes</h5>
-            <p class="mb-1 text-dark fw-bold" id ="ad">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
- <span class="text-dark">600+ Reviews</span>
-            </p>
-            <p class="card-text text-dark">
-Lightweight feel, lasting impact. Suited for 
-active teens and adults building..            </p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <div>
-                <span class="fw-bold fs-5" id="op">₹ 3,000</span>
-                <span class="text-decoration-line-through text-muted" id="op">₹ 9,999</span>
-              </div>
-              <a href="#" class="card-button">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-         <!-- card8 -->
-<div class="card h-100 shadow-sm">
-          <div class="position-relative">
-             <div class="image-slider-wrapper card-img-top"  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
-    <!-- Progress bar -->
-
-<!-- <div class="slider-progress">
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-  <span><div class="fill"></div></span>
-</div> -->
-
-    <!-- Multiple images -->
-    <img src="image/classic2.png" class="active" alt="img 1" />
-    <!-- <img src="image/beast4.png" alt="img 2" />
-    <img src="image/beast5.png" alt="img 3" />
-    <img src="image/beast1.png" alt="img 4" /> -->
-    <!-- Discount badge -->
-    <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 20%</span>
-  </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Dawon Athletics - Classic Ropes</h5>
-            <p class="mb-1 text-dark fw-bold"id ="ad">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
- <span class="text-dark">100+ Reviews</span>
-            </p>
-            <p class="card-text text-dark ">
-Natural resistance meets pure control. Train harder, move better.
-            </p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <div>
-                <span class="fw-bold fs-5" id="op">₹ 3,000</span>
-                <span class="text-decoration-line-through text-muted" id="op">₹ 7,000</span>
-              </div>
-              <a href="#" class="card-button">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-         <!-- card 9 -->
-                  <div class="card h-100 shadow-sm">
-            <div class="position-relative">
-
-        <div class="image-slider-wrapper card-img-top "  alt="Speed Rope 1" onmouseenter="startSlider(this)" onmouseleave="stopSlider(this)">
-          <!-- Progress bar -->
-
-      <div class="slider-progress">
-        <span><div class="fill"></div></span>
-        <span><div class="fill"></div></span>
-        <span><div class="fill"></div></span>
-        <span><div class="fill"></div></span>
-      </div>
-
-          <!-- Multiple images -->
-          <img src="image/dawon1.9 (2).png" class="active " alt="img 1" />
-          <img src="image/speed7.png" alt="img 2" />
-          <img src="image/speed8.png" alt="img 3" />
-          <img src="image/speed9.png" alt="img 4" />
-          <!-- Discount badge -->
-          <span class="badge bg-dark position-absolute top-4 end-0 m-3">SAVE 20%</span>
-        </div>
-          </div>
-
-          <div class="card-body">
-            <h5 class="card-title">Dawon Athletics - Speed Ropes</h5>
-            <p class="mb-1 text-dark fw-bold" id ="ad">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
- <span class="text-dark">800+ Reviews</span>
-            </p>
-            <p class="card-text text-dark ">
-              All the speed and agility benefits in a  the lightweight set. Perfect for beginners.
-            </p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <div>
-                <span class="fw-bold fs-5" id="op">₹ 2,000</span>
-                <span class="text-decoration-line-through text-muted" id="op">₹ 8,000</span>
-              </div>
-              <a href="#" class="card-button">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="carousel-indicator">
-  <div class="segment" data-index="0"></div>
-  <div class="segment" data-index="1"></div>
-  <div class="segment" data-index="2"></div>
-  <div class="segment" data-index="3"></div>
-  <div class="segment" data-index="4"></div>
-    <div class="segment" data-index="5"></div>
-  <div class="segment" data-index="6"></div>
-  <div class="segment" data-index="7"></div>
-  <div class="segment" data-index="8"></div>
-
-</div>
-
-</div>
-</div>
+    </div>
+    </div>
 </div>
 
 
@@ -837,6 +958,10 @@ Natural resistance meets pure control. Train harder, move better.
     <p class="mb-0 ">Copyright © 2025 <span class="fw-bold">Dawon Athletics.</span> All Rights Reserved</p>
   </div>
 </footer>
+
+<!-- ✅ jQuery and Owl Carousel Scripts (Place these FIRST) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
   let quantity = 1;
   const qtyElement = document.getElementById('qty');
@@ -865,28 +990,8 @@ Natural resistance meets pure control. Train harder, move better.
 
   
 </script>
-<!-- Custom Script -->
-<script>
-  const images = {
-    steel: document.getElementById('img-steel'),
-    aluminum: document.getElementById('img-aluminum'),
-    spring: document.getElementById('img-spring'),
-    carbon: document.getElementById('img-carbon'),
-  };
 
-  document.querySelectorAll('#materialTabs .nav-link').forEach(tab => {
-    tab.addEventListener('shown.bs.tab', function () {
-      const targetId = this.getAttribute('data-bs-target').substring(1); // remove '#' from id
-      // Hide all images
-      Object.values(images).forEach(img => img.classList.add('d-none'));
-      // Show the corresponding image
-      images[targetId].classList.remove('d-none');
-    });
-  });
-</script>
-<!-- ✅ jQuery and Owl Carousel Scripts (Place these FIRST) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 
 <!-- ✅ Owl Carousel Initialization (Place AFTER jQuery + Owl Carousel) -->
 <script>
@@ -993,8 +1098,25 @@ Natural resistance meets pure control. Train harder, move better.
 </script>
 
 
+<!-- Custom Script -->
+<script>
+  const images = {
+    steel: document.getElementById('img-steel'),
+    aluminum: document.getElementById('img-aluminum'),
+    spring: document.getElementById('img-spring'),
+    carbon: document.getElementById('img-carbon'),
+  };
 
-
+  document.querySelectorAll('#materialTabs .nav-link').forEach(tab => {
+    tab.addEventListener('shown.bs.tab', function () {
+      const targetId = this.getAttribute('data-bs-target').substring(1); // remove '#' from id
+      // Hide all images
+      Object.values(images).forEach(img => img.classList.add('d-none'));
+      // Show the corresponding image
+      images[targetId].classList.remove('d-none');
+    });
+  });
+</script>
 <!-- Swiper JS (if you're using it elsewhere) -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
