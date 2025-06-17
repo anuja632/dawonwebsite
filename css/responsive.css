@@ -832,7 +832,7 @@ h6 {
     font-size: 18px;
     line-height: 1.6;
     color: #ccc;
-    width: 300px;
+    width: 300px !important;
     text-align: justify;
 }
 #materialTabs{
@@ -907,7 +907,7 @@ h6 {
     font-size: 18px;
     line-height: 1.6;
     color: #ccc;
-    width: 350px;
+    width: 330px !important;
     text-align: justify;
 }
 .product-title {
