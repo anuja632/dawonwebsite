@@ -15,18 +15,27 @@ html, body {
     position: relative;
   }
 
-  /* Hide dropdown by default */
-  .canvas-dropdown {
-    display: none;
-    position: absolute;
-    top: 150%;  /* right below the link */
-    left: -760px;
-    width: 1200px;
-    background-color: #000;
-    z-index: 9999;
-    border-radius: 10px;
-    padding: 1rem;
-  }
+.dropdown-wrapper {
+  position: relative;
+}
+
+.canvas-dropdown {
+  display: none;
+  position: absolute;
+  top: 150%;
+  left: -40%;
+  transform: translateX(-50%);
+  width: 1200px;
+  max-width: 95vw;
+  background-color: #000;
+  z-index: 9999;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.dropdown-wrapper:hover .canvas-dropdown {
+  display: block;
+}
 
   /* Show dropdown on hover */
   .nav-item.dropdown:hover .canvas-dropdown {
