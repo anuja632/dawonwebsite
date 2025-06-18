@@ -1,4 +1,6 @@
 
+
+
  @media screen and (max-width:1280px)
   {.image-slider-wrapper {
     position: relative;
@@ -29,7 +31,7 @@
     display: none;
     position: absolute;
     top: 150%;
-    left: -108px;
+    left: -80px;
     width: 1200px;
     background-color: #000;
     z-index: 9999;
@@ -45,106 +47,186 @@
     cursor: pointer;
 }
 .navbar-nav{
-  gap:0px;}
+  gap:10px;}
   .navbar {
     background-color: #000;
     font-size: 22px !important;
     font-family: "Roboto Condensed", sans-serif;
-    /* gap: 10px; */
+    gap: 10px;
 }
  }
 
 
+/* 1024px and below */
+@media(min-width: 993px) and (max-width: 1200px){
+  .navbar-nav .nav-item {
+    margin: 0 10px;
 
+  }
+.navbar{
+          font-size: 13px !important;
 
-
-
-@media (min-width: 1024px) and (max-width: 1260px) {
-  /* Adjust navbar padding for smaller desktops */
-  .navbar .container-fluid {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+}
+  .search-bar {
+    max-width: 320px;
   }
 
-  /* Reduce logo size slightly */
-  .logo-img {
-    height: 40px;
+  .custom-input-group input::placeholder {
+    font-size: 14px;
   }
-
-  /* Slightly shrink search bar */
-  .search-bar,
-  .custom-input-group {
-    max-width: 300px;
+    .owl-carousel .item {
+    height: 60vh;
   }
-
-  /* Reduce font size for nav links */
-  .navbar {
-    font-size: 20px !important;
-  }
-
-  /* Adjust dropdown menu */
-  .canvas-dropdown {
-    width: 1000px;
+  .play-icon {
+    z-index: 3;
+    top: 20%;
     left: 50%;
-    transform: translateX(-50%);
-  }
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+}
+    
 
-  .dropdown-card img {
-    height: 160px;
-  }
-
-  .canvas-dropdown ul li {
-    font-size: 16px;
-  }
-
-  /* Adjust nav icon labels (Sign in, Cart) */
-  .nav-item.text-center span {
-    font-size: 19px;
-  }
-
-  .navbar-nav {
-    gap: 10px;
-  }
-    /* Adjust slide height slightly for smaller desktops */
-  .owl-carousel .item {
-    height: 80vh;
-  }
-
-  /* Scale down heading size */
-  .carousel-caption h1 {
-    font-size: 3.3rem;
-  }
-
-  /* Resize paragraph */
-  .carousel-caption p {
-    font-size: 25px;
-    width: 450px;
-  }
-
-
-  /* Limit caption container width */
-  .carousel-caption {
-    /* max-width: 700px; */
-    padding: 1.5rem;
-    left: 13%;
-  }
-
-  /* Resize nav arrows slightly */
+  
   .owl-prev, .owl-next {
     width: 40px;
     height: 40px;
-    font-size: 18px;
+    font-size: 16px;
   }
-   
+  
 .image-slider-wrapper {
     position: relative;
     height: 250px;
     overflow: hidden;
     border-radius: 10px;
 }
+.card-title {
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    font-size: 18px;
 }
+.card-text {
+    text-align: justify;
+    color: #000000;
+    font-size: 16px;
+}
+.slider-progress {
+    position: absolute;
+    top: 9px;
+    left: 25px;
+    display: flex;
+    gap: 5px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 80%;
+    text-align: center;
+}
+.card-button {
+    background-color: #C80000;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    color: #FFFFFF;
+}
+.footer {
+    font-family: "Poppins";
+    font-size: 14px;
+}
+h6 {
+    font-size: 17px !important;
+}
+.jump-image
+ {
+    max-height: 350px !important;
+    object-fit: contain;
+    width: auto;
+}
+#la {
+    font-weight: 800;
+    font-size: 3rem;
+}
+.text-gradient-blue-black {
+  font-size: 1.5rem;;
 
+}
+.speed, .ropes{
+  font-size: 5rem;;
+}
+.play-icon img {
+    width: 50%;
+    height: auto;
+}
+.video-banner {
+    background: url(./../image/girl.png) no-repeat center center;
+    background-size: cover;
+    height: 45vh;
+    position: relative;
+}
+.shop-now-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+  .canvas-dropdown {
+    width: 1000px;
+    left: -615px;
+  }
+  .dropdown-card img {
+    height: 180px;
+  }
 
+  
+  .canvas-dropdown ul li {
+    font-size: 17px;
+  }
+    .canvas-dropdown .row{
+      row-gap:30px !important;
+    }
+
+  .dropdown-card .card-footer {
+    font-size: 14px;
+  }
+  .thumbs img {
+    width: 100px;
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.cta-box {
+    position: absolute;
+    top: 67%;
+    right: -45%;
+    transform: translateY(-80%);
+    background: linear-gradient(to right, #8b0000, #000);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+  
+}
 
 
  @media  (max-width:912px) {
@@ -211,7 +293,14 @@
 }
   .your-motion,.master {font-size: 2rem;
 }
-
+    .carousel-caption {
+        max-width: 70% !important;
+        padding: 1.5rem;
+        left: 6% !important;
+    }
+.carousel-caption p{
+  width:70% !important;
+}
   .owl-carousel .item {
     height: 50vh !important;
   }
@@ -268,7 +357,7 @@
 
  @media (min-width: 768px)  and (max-width:900px){
   .card-title {
-    /* font-size: 20px; */
+    font-size: 20px;
     text-align: center;
   }
 #op{
@@ -278,7 +367,7 @@
 
 
   .card-text {
-    /* font-size: 13px; */
+    font-size: 13px;
             width: 185px;
   }
 
@@ -325,11 +414,11 @@ h6 {
 }
 
 
-    /* .carousel-caption {
+    .carousel-caption {
         max-width: 70% !important;
         padding: 1.5rem;
         left: 8% !important;
-    } */
+    }
 .carousel-caption p{
   width:70% !important;
 }
@@ -456,7 +545,7 @@ h6 {
   row-gap: 20px;
 }
   .card-title {
-    /* font-size: 18px; */
+    font-size: 18px;
     text-align: center;
   }
 
@@ -484,7 +573,7 @@ h6 {
   }
   .card-title{
     text-align: start;
-    /* font-size: 20px; */
+    font-size: 20px;
   }
   #ad{
     text-align: start;
@@ -542,12 +631,16 @@ h6 {
   .carousel-caption {
     max-width: 90%;
     padding: 1.5rem;
-    left: 8%;
+    left: 3%;
   }
   
 
   
 
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
   
   .owl-prev, .owl-next {
     width: 40px;
@@ -589,7 +682,7 @@ h6 {
   }
   
   .carousel-caption h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   
   .carousel-caption p {
@@ -638,7 +731,7 @@ h6 {
 /* Very small devices */
 @media (max-width: 375px) {
   .carousel-caption h1 {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 .carousel-caption{
       left:15% !important;

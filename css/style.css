@@ -179,13 +179,13 @@ html, body {
 .carousel-caption {
   max-width: 900px;
   padding: 2rem;
-  left:5%;
+  left:10%;
   border-radius: 10px;
   text-align: start !important;
 }
 
 .carousel-caption h1 {
-      font-size: 3rem;
+      font-size: 3.3rem;
       font-weight: 800;
       font-family:"Fugaz One",sans-serif;
     }
@@ -203,7 +203,7 @@ html, body {
       border: none;
       font-weight: 700;
       padding: 12px 24px;
-      font-size: 1rem;
+      font-size: 1.5rem;
       border-radius: 8px;
       margin-top: 1.5rem;
       color:#FFFFFF;
@@ -316,7 +316,8 @@ font-family: 'Bebas Neue', sans-serif;
 .card-title{
   font-family:"Roboto Condensed";
   font-weight: bold;
-  font-size: 23px;
+      font-size: 1.7rem;
+
 }
 .card-button{
       background-color:#C80000;
@@ -333,7 +334,7 @@ font-family: 'Bebas Neue', sans-serif;
     .card-text{
       text-align: justify;
       color:#000000;
-    font-size: 18px;
+    font-size: 19px;
     }
       .image-slider-wrapper {
     position: relative;
@@ -671,7 +672,7 @@ h6{
   object-fit: contain;
   background-color: #fff;
 } */
-h5{
+h4{
   font-family: "Roboto Condensed";
 }
 .speedrope{
