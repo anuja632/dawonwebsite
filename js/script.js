@@ -80,3 +80,15 @@
       images[targetId].classList.remove('d-none');
     });
   });
+    document.querySelectorAll('.accordion-button').forEach(button => {
+    button.addEventListener('click', function () {
+      const icon = this.querySelector('.toggle-icon');
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+
+      // Reset all other icons
+      document.querySelectorAll('.toggle-icon').forEach(el => el.textContent = '+');
+
+      // Update current icon
+      icon.textContent = expanded ? '+' : '–';
+    });
+  });
