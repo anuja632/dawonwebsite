@@ -1113,7 +1113,7 @@
 
 
 
-
+<!-- 
 <script>
   function startSlider(container) {
     const images = container.querySelectorAll("img");
@@ -1160,30 +1160,17 @@
       container._timers = [];
     }
   }
-</script>
+</script> -->
 
 
-<!-- Custom Script -->
-<script>
-  const images = {
-    steel: document.getElementById('img-steel'),
-    aluminum: document.getElementById('img-aluminum'),
-    spring: document.getElementById('img-spring'),
-    carbon: document.getElementById('img-carbon'),
-  };
 
-  document.querySelectorAll('#materialTabs .nav-link').forEach(tab => {
-    tab.addEventListener('shown.bs.tab', function () {
-      const targetId = this.getAttribute('data-bs-target').substring(1); // remove '#' from id
-      // Hide all images
-      Object.values(images).forEach(img => img.classList.add('d-none'));
-      // Show the corresponding image
-      images[targetId].classList.remove('d-none');
-    });
-  });
-</script>
 <!-- Swiper JS (if you're using it elsewhere) -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+<!-- Bootstrap 5 JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+
+
+<script src="js/script.js"></script>
 </body>
 </html>
